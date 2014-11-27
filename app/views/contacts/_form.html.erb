@@ -19,6 +19,12 @@
     <%= f.label :last_name %><br>
     <%= f.text_field :last_name %>
   </div>
+  <div class="field">
+    <%= f.fields_for :emails do |builder| %>
+    <%= builder.label :email %><br />
+    <%= builder.text_field :value %>
+    <% end %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
