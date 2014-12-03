@@ -20,9 +20,10 @@
     <%= f.text_field :last_name %>
   </div>
   <div class="field">
+    <%= f.label :email %><br />
     <%= f.fields_for :emails do |builder| %>
-    <%= builder.label :email %><br />
     <%= builder.text_field :value %>
+    <button>+</button><br />
     <% end %>
   </div>
   <div class="actions">
