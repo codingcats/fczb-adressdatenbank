@@ -23,7 +23,7 @@
     <%= f.label :email %><br />
     <%= f.fields_for :emails do |builder| %>
     <%= builder.text_field :value %>
-    <button>+</button><br />
+    <a class="add-email">+</a><br />
     <% end %>
   </div>
   <div class="actions">

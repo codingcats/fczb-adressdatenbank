@@ -2,8 +2,8 @@
 // All this logic will automatically be available in application.js.
 // You can use CoffeeScript in this file: http://coffeescript.org/
 
+ 
 $( document ).ready(function() {
-	$("button").click(function(e) {
-		e.preventDefault();
-	});	
+	$("a.add-email").click(function(){alert("hallo")})
 });
+
