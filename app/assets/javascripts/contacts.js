@@ -4,6 +4,9 @@
 
  
 $( document ).ready(function() {
-	$("a.add-email").click(function(){alert("hallo")})
+	$(".add-email").click(function(){
+		var input = $("<input><br>");
+		$(".email-container").append(input);
+			
+	});
 });
-

@@ -11,6 +11,7 @@
     </div>
   <% end %>
 
+
   <div class="field">
     <%= f.label :first_name %><br>
     <%= f.text_field :first_name %>
@@ -19,7 +20,7 @@
     <%= f.label :last_name %><br>
     <%= f.text_field :last_name %>
   </div>
-  <div class="field">
+  <div class="field email-container">
     <%= f.label :email %><br />
     <%= f.fields_for :emails do |builder| %>
     <%= builder.text_field :value %>
