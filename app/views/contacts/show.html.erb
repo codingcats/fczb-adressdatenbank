@@ -12,6 +12,10 @@
   <%= @contact.last_name %>
 </p>
 
+<p>
+  <strong>Email:</strong>
+  <%= @contact.emails.map { |e| e.value}.join(", ") %>
+</p>
 
 <%= link_to 'Edit', edit_contact_path(@contact) %> |
 <%= link_to 'Back', contacts_path %>

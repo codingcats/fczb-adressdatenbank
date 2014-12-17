@@ -11,6 +11,7 @@
     </div>
   <% end %>
 
+
   <div class="field">
     <%= f.label :first_name %><br>
     <%= f.text_field :first_name %>
@@ -19,6 +20,25 @@
     <%= f.label :last_name %><br>
     <%= f.text_field :last_name %>
   </div>
+
+  <div class="field email-container">
+    <table>
+      <thead>
+        <th><%= f.label :email %></th>
+        <th>Löschen</th>
+      </thead>
+      <tbody>
+        <%= f.fields_for :emails do |builder| %>
+          <tr>
+            <td><%= builder.text_field :value %></td>
+            <td><%= builder.check_box '_destroy' %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <a class="add-email">+</a><br />
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
