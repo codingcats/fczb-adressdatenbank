@@ -36,9 +36,11 @@ $( document ).ready(function() {
   });
   
   // Lösche die Email, wenn das Element mit der .remove-email Klasse angeklickt wird.
-  $(".remove-email").click(function(){
+  /*$(".remove-email").click(function(){
     if (confirm('Die Email wird bei "OK" gelöscht.')) {
       $( this ).parent().remove();
     }
-  });
+  });*/
+  
+  
 });
