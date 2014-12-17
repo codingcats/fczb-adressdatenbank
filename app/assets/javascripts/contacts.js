@@ -33,5 +33,15 @@ $( document ).ready(function() {
                                 .attr("id", createId())
                                 .attr("name", createName()));
     $(".email-container").append(div);
-  });  
+  });
+  
+  // Löschen über Checkbox bei Submit (mit Sicherheitsabfragefenster)
+  $("input[type='submit']").click(function(e){
+    if ($("form input:checkbox:checked").length >0 ){
+      if (!confirm('Möchten Sie die markierten Emailadressen löschen?')) {
+        e.preventDefault();
+      }
+    }
+  });
+  
 });
