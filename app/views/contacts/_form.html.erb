@@ -21,15 +21,22 @@
     <%= f.text_field :last_name %>
   </div>
   <div class="field email-container">
-    <%= f.label :email %><br />
-    <%= f.fields_for :emails do |builder| %>
-      <div>
-        <%= builder.text_field :value %>
-        <!--<a class="remove-email">-</a>-->
-        <%= builder.check_box '_destroy' %>
-        <a class="add-email">+</a><br />
-      </div>  
-    <% end %>
+    <table>
+      <thead>
+        <th><%= f.label :email %></th>
+        <th>Löschen</th>
+        <th>Hinzufügen</th>
+      </thead>
+      <tbody>
+        <%= f.fields_for :emails do |builder| %>
+          <tr>
+            <td><%= builder.text_field :value %></td>
+            <td><%= builder.check_box '_destroy' %></td>
+            <td><a class="add-email">+</a><br /></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
   </div>
   <div class="actions">
     <%= f.submit %>
