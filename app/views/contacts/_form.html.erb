@@ -23,8 +23,11 @@
   <div class="field email-container">
     <%= f.label :email %><br />
     <%= f.fields_for :emails do |builder| %>
-    <%= builder.text_field :value %>
-    <a class="add-email">+</a><br />
+      <div>
+        <%= builder.text_field :value %>
+        <a class="remove-email">-</a>
+        <a class="add-email">+</a><br />
+      </div>  
     <% end %>
   </div>
   <div class="actions">
