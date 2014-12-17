@@ -25,18 +25,17 @@
       <thead>
         <th><%= f.label :email %></th>
         <th>Löschen</th>
-        <th>Hinzufügen</th>
       </thead>
       <tbody>
         <%= f.fields_for :emails do |builder| %>
           <tr>
             <td><%= builder.text_field :value %></td>
             <td><%= builder.check_box '_destroy' %></td>
-            <td><a class="add-email">+</a><br /></td>
           </tr>
         <% end %>
       </tbody>
     </table>
+    <a class="add-email">+</a><br />
   </div>
   <div class="actions">
     <%= f.submit %>
