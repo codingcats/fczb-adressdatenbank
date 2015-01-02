@@ -3,5 +3,6 @@ class Contact < ActiveRecord::Base
     validates :last_name, presence: true
 
     has_many :emails
+    belongs_to :institution
     accepts_nested_attributes_for :emails, :allow_destroy => true
 end
