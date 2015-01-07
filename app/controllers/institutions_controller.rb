@@ -4,6 +4,11 @@ class InstitutionsController < ApplicationController
   end
 
   def edit
+  	@institution = Institution.find(params[:id])
+  end
+
+  def show
+  	@institution = Institution.find(params[:id])
   end
 
   def create
@@ -15,6 +20,16 @@ class InstitutionsController < ApplicationController
   		render :new
   	end	
   end
+
+  def update
+  	@institution = Institution.find(params[:id])
+  	
+  	if @institution.update(institution_params)
+  		redirect_to @institution, notice: 'Institution wurde geändert.'
+  	else
+  		render :edit
+  	end
+ 	end
 
   private
   	# Never trust parameters from the scary internet, only allow the white list through.
