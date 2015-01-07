@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'institutions/new'
+
   resources :contacts
 
   # The priority is based upon order of creation: first created -> highest priority.
