@@ -1,0 +1,35 @@
+<div class="center jumbotron">
+
+<h1>Institutionen</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name &nbsp;</th>
+      <th>Straße &nbsp;</th>
+      <th>Plz &nbsp;</th>
+      <th>Ort &nbsp;</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @institutions.each do |institution| %>
+      <tr>
+        <td><%= institution.name %></td>
+        <td><%= institution.street %></td>
+        <td><%= institution.postcode %></td>
+        <td><%= institution.city %></td>
+        <td><%= link_to 'Show', institution %></td>
+        <td><%= link_to 'Edit', edit_institution_path(institution) %></td>
+        <td><%= link_to 'Destroy', institution, method: :delete, data: { confirm: 'Wirklich löschen?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Institution anlegen', new_institution_path %>
+
+</div>
