@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :occasions
+
   get 'static_pages/home'
 
   resources :contacts
