@@ -21,11 +21,6 @@ ActiveRecord::Schema.define(version: 20150106202244) do
     t.integer  "institution_id"
   end
 
-  create_table "contacts_emails", id: false, force: true do |t|
-    t.integer "contact_id", null: false
-    t.integer "email_id",   null: false
-  end
-
   create_table "emails", force: true do |t|
     t.string   "value"
     t.datetime "created_at"
