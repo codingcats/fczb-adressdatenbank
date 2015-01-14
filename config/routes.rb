@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
 
-  resources :occasions
+  
 
   get 'static_pages/home'
 
   resources :contacts
   resources :institutions
   resources :users
+  resources :occasions
 
   root 'static_pages#home'
 
