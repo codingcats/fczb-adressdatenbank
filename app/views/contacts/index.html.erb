@@ -21,8 +21,8 @@
         <td><%= contact.last_name %></td>
         <td><%= contact.emails.map { |e| e.value}.join(", ") %></td>
         <td><%= link_to 'Anzeigen', contact %></td>
-        <td><%= link_to 'Editieren', edit_contact_path(contact) %></td>
-        <td><%= link_to 'Löschen', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Bearbeiten', edit_contact_path(contact) %></td>
+        <td><%= link_to 'Löschen', contact, method: :delete, data: { confirm: 'Wirklich löschen?' } %></td>
       </tr>
     <% end %>
   </tbody>

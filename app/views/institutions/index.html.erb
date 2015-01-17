@@ -21,9 +21,9 @@
         <td><%= institution.street %></td>
         <td><%= institution.postcode %></td>
         <td><%= institution.city %></td>
-        <td><%= link_to 'Show', institution %></td>
-        <td><%= link_to 'Edit', edit_institution_path(institution) %></td>
-        <td><%= link_to 'Destroy', institution, method: :delete, data: { confirm: 'Wirklich löschen?' } %></td>
+        <td><%= link_to 'Anzeigen', institution %></td>
+        <td><%= link_to 'Bearbeiten', edit_institution_path(institution) %></td>
+        <td><%= link_to 'Löschen', institution, method: :delete, data: { confirm: 'Wirklich löschen?' } %></td>
       </tr>
     <% end %>
   </tbody>
