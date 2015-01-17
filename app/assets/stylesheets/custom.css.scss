@@ -25,36 +25,44 @@ textarea {
 
 .center {
   text-align: center;
+  vertical-align:middle;
 }
 
 .center h1 {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+
 }
 
 .jumbotron {
-   margin: 20px;
+   margin: 5px;
 }
 
 .jumbotron .container {
-  padding-left: 60px;
-  padding-right: 60px;
-  border-radius: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 60px;
+ 
 }
 
 td {
   padding: 10px;
-  text-align: left;	
+  text-align: left;
+  vertical-align:middle;	
 }
 
 /* header */
 
 .navbar {
   background-color: #dd3333;
-  border-color: #dd3333;
+  border-color: #000000; 
 }
+
 .navbar .container {
   float: left;
+  margin-top: 1px;
+  text-align: middle;
 }
+
 
 #logo {
   float: left;
@@ -63,15 +71,16 @@ td {
   color: #fff;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
+  padding-top: 15px;
+  font-weight: normal;
 }
 
 #logo:hover {
-  color: #fff;
+  color: #ffffff;
   background-color: #dd3333;
   text-decoration: none;
 }
+
 
 /* typography */
 
@@ -80,9 +89,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 10px;
   letter-spacing: -2px;
-  margin-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   text-align: center;
 }
 
