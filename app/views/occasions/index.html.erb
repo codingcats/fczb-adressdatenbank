@@ -1,11 +1,11 @@
 <div class="center jumbotron">
 
-  <h1>Listing occasions</h1>
+  <h1>Kontaktanl&auml;sse</h1>
 
-<table>
+<table class="table table-condensed table-striped">
   <thead>
     <tr>
-      <th>Name</th>
+      <th>Bezeichnung</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,9 +14,9 @@
     <% @occasions.each do |occasion| %>
       <tr>
         <td><%= occasion.name %></td>
-        <td><%= link_to 'Show', occasion %></td>
-        <td><%= link_to 'Edit', edit_occasion_path(occasion) %></td>
-        <td><%= link_to 'Destroy', occasion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Anzeigen', occasion %></td>
+        <td><%= link_to 'Bearbeiten', edit_occasion_path(occasion) %></td>
+        <td><%= link_to 'Löschen', occasion, method: :delete, data: { confirm: 'Wirklich löschen?' } %></td>
       </tr>
     <% end %>
   </tbody>
