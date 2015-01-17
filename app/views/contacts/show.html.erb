@@ -17,7 +17,6 @@
   <%= @contact.emails.map { |e| e.value}.join(", ") %>
 </p>
 
-
-<%= link_to 'Edit', edit_contact_path(@contact) %> |
-<%= link_to 'Back', contacts_path %>
+<%= link_to "Kontakt editieren".html_safe, edit_contact_path(@contact), :id=>"open-contacts-dialog-btn", :class=>"btn btn-default btn-lg" %>
+<%= link_to "Alle Kontakte".html_safe, contacts_path, :id=>"open-contacts-dialog-btn", :class=>"btn btn-default btn-lg" %>
 </div>
