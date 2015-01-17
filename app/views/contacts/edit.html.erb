@@ -3,6 +3,7 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @contact %> |
-<%= link_to 'Back', contacts_path %>
+<%= link_to "Kontakt anzeigen".html_safe, @contact, :id=>"open-contacts-dialog-btn", :class=>"btn btn-default btn-lg" %>
+<%= link_to "Alle Kontakte".html_safe, contacts_path, :id=>"open-contacts-dialog-btn", :class=>"btn btn-default btn-lg" %>
+
 </div>
