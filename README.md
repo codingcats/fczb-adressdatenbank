@@ -1,28 +1,37 @@
-== README
+## About
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is Kontaktdatenbank. This application should support the Press & PR people at Frauencomputerzentrum Berlin
+in organizing their contacts. It is being developed within a project semester at htw Berlin
+and also our first Rails project.
 
-Things you may want to cover:
+## Setup
+```
+git clone git://github.com/codingcats/fczb-adressdatenbank
+cd fczb-adressdatenbank
+gem install bundler
+bundle install
 
-* Ruby version
+[configure your datebase]
+[configure the application]
 
-* System dependencies
+bundle exec rake db:migrate
+```
 
-* Configuration
+## Description
 
-* Database creation
+Kontaktdatenbank has three main sections.
 
-* Database initialization
+### Contacts
+An individual person and their Emailadress(es).
 
-* How to run the test suite
+### Institutions
+The instution each contact is associated with, providing a 'real life' mailing address and other info.
 
-* Services (job queues, cache servers, search engines, etc.)
+### Occasions
+People can be contacted for different occasions, e.g. a Xmas mailing or an invitation for a multipliers meetup.
 
-* Deployment instructions
+[to be elaborated on]
 
-* ...
+## Authors
 
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+see contributors
