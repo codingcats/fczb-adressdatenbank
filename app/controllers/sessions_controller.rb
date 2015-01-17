@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       log_in user
       params[:session][:remember_me] == '1' ? remember(user) : forget(user)
-      redirect_to user
+      redirect_to static_pages_home_path
     else
       flash.now[:danger] = 'Username/Passwort Kombination inkorrekt.'
       render 'new'

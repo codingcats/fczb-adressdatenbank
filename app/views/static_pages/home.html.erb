@@ -1,4 +1,10 @@
-<h1>Home</h1>
-<p>Edit Users in -> <u><%= link_to "Kontakte bearbeiten", contacts_path %></u></p>
-<p>New Institutions in -> <u><%= link_to "Institutionen anlegen", new_institution_path %></u></p>
-<p>New Occasion in -> <u><%= link_to "Anlass anlegen", new_occasion_path %></u></p>
+<% if logged_in? %>
+  <h1>Herzlich Willkommen</h1>
+  <p>Edit Users in -> <u><%= link_to "Kontakte bearbeiten", contacts_path %></u></p>
+  <p>New Institutions in -> <u><%= link_to "Institutionen anlegen", new_institution_path %></u></p>
+  <p>New Occasion in -> <u><%= link_to "Anlass anlegen", new_occasion_path %></u></p>
+<% else %>
+  <h1>Herzlich Willkommen!</h1>
+  <h1>Bitte <%= link_to "logge dich ein", '/login' %>! </h1>
+<% end %>
+  
