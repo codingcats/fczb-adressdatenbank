@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :institutions
   resources :users
   resources :occasions
+  resources :handbook
 
   root 'static_pages#home'
 
