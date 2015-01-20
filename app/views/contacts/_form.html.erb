@@ -13,12 +13,20 @@
 
 
   <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
     <%= f.label :first_name %><br>
     <%= f.text_field :first_name %>
   </div>
   <div class="field">
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
+    <%= f.label :Anrede %><br>
+    <%= f.text_field :form_of_address %>
+  </div>
+  <div class="field">
+    <%= f.label :Position%><br>
+    <%= f.text_field :position %>
   </div>
 
   <div class="field email-container">
@@ -38,6 +46,21 @@
     </table>
     <a class="add-email">+</a><br />
   </div>
+
+  <div class="field">
+    <%= f.label :Festnetz %><br>
+    <%= f.text_field :landline %>
+  </div>
+  <div class="field">
+    <%= f.label :Mobil %><br>
+    <%= f.text_field :mobile %>
+  </div>
+  <div class="field">
+    <%= f.label :Fax %><br>
+    <%= f.text_field :fax %>
+  </div>
+
+  
 
   <div class="actions">
     <%= f.submit nil, :id => "submit-contact-detail" %>
