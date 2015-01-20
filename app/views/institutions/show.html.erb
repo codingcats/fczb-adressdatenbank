@@ -21,7 +21,16 @@
   <strong>Ort:</strong>
   <%= @institution.city %>
 </p>
-
+  
+<p>
+  <strong>Webseite:</strong>
+  <%= @institution.website %>
+</p>
+  
+<p>
+  <strong>Kommentar:</strong>
+  <%= @institution.comment %>
+</p>
 
 <%= link_to 'Edit', edit_institution_path(@institution) %> |
 <%= link_to 'Back', institutions_path %>
