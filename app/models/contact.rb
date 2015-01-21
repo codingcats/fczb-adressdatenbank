@@ -4,5 +4,6 @@ class Contact < ActiveRecord::Base
 
     has_many :emails
     belongs_to :institution
+    has_and_belongs_to_many :occasions
     accepts_nested_attributes_for :emails, :allow_destroy => true
 end

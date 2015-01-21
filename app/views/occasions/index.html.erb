@@ -1,0 +1,28 @@
+<div class="center jumbotron">
+
+  <h1>Kontaktanl&auml;sse</h1>
+
+<table class="table table-condensed table-striped">
+  <thead>
+    <tr>
+      <th>Bezeichnung</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @occasions.each do |occasion| %>
+      <tr>
+        <td><%= occasion.name %></td>
+        <td><%= link_to 'Anzeigen', occasion %></td>
+        <td><%= link_to 'Bearbeiten', edit_occasion_path(occasion) %></td>
+        <td><%= link_to 'Löschen', occasion, method: :delete, data: { confirm: 'Wirklich löschen?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to "Neuen Anlass anlegen".html_safe, new_occasion_path, :id=>"open-contacts-dialog-btn", :class=>"btn btn-default btn-lg" %>
+</div>
