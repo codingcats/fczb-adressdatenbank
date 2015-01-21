@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 20150121182405) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "dispatch_mode"
   end
 
   create_table "users", force: true do |t|
