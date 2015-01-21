@@ -1,4 +1,6 @@
 <div class="center jumbotron">
+<% if logged_in? %>
+
 <h1>Home</h1>
 
 <p>&nbsp;</p>
@@ -20,4 +22,10 @@
 	<%= link_to "Anlass<br>neu".html_safe, new_occasion_path, :id=>"open-contacts-dialog-btn", :class=>"btn btn-default btn-lg" %>
 </div>
 
+
+
+<% else %>
+  <h1>Herzlich Willkommen!</h1>
+  <h1>Bitte <%= link_to "logge dich ein", '/login' %>! </h1>
+<% end %>
 </div>
