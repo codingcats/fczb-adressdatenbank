@@ -10,7 +10,9 @@
       <th>Straße &nbsp;</th>
       <th>Plz &nbsp;</th>
       <th>Ort &nbsp;</th>
-      <th colspan="4"></th>
+      <th>Webseite &nbsp;</th>
+      <th>Kommentar &nbsp;</th>
+      <th colspan="6"></th>
     </tr>
   </thead>
 
@@ -21,6 +23,8 @@
         <td><%= institution.street %></td>
         <td><%= institution.postcode %></td>
         <td><%= institution.city %></td>
+        <td><%= institution.website %></td>
+        <td><%= institution.comment %></td>
         <td><%= link_to 'Anzeigen', institution %></td>
         <td><%= link_to 'Bearbeiten', edit_institution_path(institution) %></td>
         <td><%= link_to 'Löschen', institution, method: :delete, data: { confirm: 'Wirklich löschen?' } %></td>

@@ -9,8 +9,13 @@
     <tr>
       <th>Vorname &nbsp;</th>
       <th>Nachname &nbsp;</th>
+      <th>Anrede &nbsp;</th>
+      <th>Position &nbsp;</th>
       <th>Email &nbsp;</th>
-      <th colspan="3"></th>
+      <th>Festnetz &nbsp;</th>
+      <th>Mobil &nbsp;</th>
+      <th>Fax &nbsp;</th>  
+      <th colspan="8"></th>
     </tr>
   </thead>
 
@@ -19,7 +24,12 @@
       <tr>
         <td><%= contact.first_name %></td>
         <td><%= contact.last_name %></td>
+        <td><%= contact.form_of_address %></td>
+        <td><%= contact.position %></td>
         <td><%= contact.emails.map { |e| e.value}.join(", ") %></td>
+        <td><%= contact.landline %></td>
+        <td><%= contact.mobile %></td>
+        <td><%= contact.fax %></td>
         <td><%= link_to 'Anzeigen', contact %></td>
         <td><%= link_to 'Bearbeiten', edit_contact_path(contact) %></td>
         <td><%= link_to 'Löschen', contact, method: :delete, data: { confirm: 'Wirklich löschen?' } %></td>
