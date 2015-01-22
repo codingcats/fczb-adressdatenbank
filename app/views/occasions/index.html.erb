@@ -1,6 +1,8 @@
 <div class="center jumbotron">
 
-  <h1>Kontaktanl&auml;sse</h1>
+  <h1>Liste aller Anl&auml;sse</h1>
+
+<p>&nbsp;<p>
 
 <table class="table table-condensed table-striped">
   <thead>
@@ -16,7 +18,7 @@
         <td><%= occasion.name %></td>
         <td><%= link_to 'Anzeigen', occasion %></td>
         <td><%= link_to 'Bearbeiten', edit_occasion_path(occasion) %></td>
-        <td><%= link_to 'Löschen', occasion, method: :delete, data: { confirm: 'Wirklich löschen?' } %></td>
+        <td><%= link_to 'Löschen', occasion, method: :delete, data: { confirm: 'Wollen Sie den Kontaktanlass wirklich löschen?' } %></td>
       </tr>
     <% end %>
   </tbody>
