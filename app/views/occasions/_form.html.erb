@@ -11,11 +11,11 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="left field">
     <%= f.label :Bezeichnung %><br>
     <%= f.text_field :name %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions" >
+    <%= f.submit "Datensatz speichern", :class=> "btn btn-success btn-sm" %>
   </div>
 <% end %>

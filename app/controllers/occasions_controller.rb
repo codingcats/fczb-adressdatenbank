@@ -28,7 +28,7 @@ class OccasionsController < ApplicationController
 
     respond_to do |format|
       if @occasion.save
-        format.html { redirect_to @occasion, notice: 'Occasion was successfully created.' }
+        format.html { redirect_to @occasion, notice: 'Anlass wurde erfolgreich angelegt.' }
         format.json { render :show, status: :created, location: @occasion }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class OccasionsController < ApplicationController
   def update
     respond_to do |format|
       if @occasion.update(occasion_params)
-        format.html { redirect_to @occasion, notice: 'Occasion was successfully updated.' }
+        format.html { redirect_to @occasion, notice: 'Anlass wurde erfolgreich aktualisiert.' }
         format.json { render :show, status: :ok, location: @occasion }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class OccasionsController < ApplicationController
   def destroy
     @occasion.destroy
     respond_to do |format|
-      format.html { redirect_to occasions_url, notice: 'Occasion was successfully destroyed.' }
+      format.html { redirect_to occasions_url, notice: 'Anlass wurde erfolgreich gelöscht.' }
       format.json { head :no_content }
     end
   end
