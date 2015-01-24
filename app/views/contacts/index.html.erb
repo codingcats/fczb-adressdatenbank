@@ -38,7 +38,7 @@
         <td><%= contact.mobile %></td>
         <td><%= contact.fax %></td>
         <td><%= contact.institution.present? ? contact.institution.name : "" %></td>
-        <td><%= contact.institution.present? ? contact.street.name : "" %></td>
+        <td><%= contact.institution.present? ? contact.institution.street : "" %></td>
         <td><%= contact.institution.present? ? contact.institution.postcode : "" %></td>
         <td><%= contact.institution.present? ? contact.institution.city : "" %></td>
         <td><%= contact.institution.present? ? contact.institution.website : "" %></td>

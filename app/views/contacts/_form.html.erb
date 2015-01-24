@@ -64,9 +64,7 @@
 
   <div class="field">
     <%= f.label :Institution %><br>
-    <%= f.fields_for :institutions do |builder| %>
-    <%= builder.collection_select(:institution_id, Institution.all, :id, :name) %>
-    <% end %>
+    <%= collection_select(:contact, :institution_id, Institution.all, :id, :name) %>
   </div>
 
   <div class="field">
