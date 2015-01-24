@@ -2,36 +2,39 @@
 
 <p id="notice"><%= notice %></p>
 
-<p>
+<p class="left">
   <strong>Name:</strong>
   <%= @institution.name %>
 </p>
 
-<p>
+<p class="left">
   <strong>Straße:</strong>
   <%= @institution.street %>
 </p>
 
-<p>
-  <strong>Plz:</strong>
+<p class="left">
+  <strong>PLZ:</strong>
   <%= @institution.postcode %>
 </p>
 
-<p>
+<p class="left">
   <strong>Ort:</strong>
   <%= @institution.city %>
 </p>
   
-<p>
+<p class="left">
   <strong>Webseite:</strong>
   <%= @institution.website %>
 </p>
   
-<p>
+<p class="left">
   <strong>Kommentar:</strong>
   <%= @institution.comment %>
 </p>
 
-<%= link_to 'Edit', edit_institution_path(@institution) %> |
-<%= link_to 'Back', institutions_path %>
+<%= link_to 'Institution bearbeiten', edit_institution_path(@institution), :class=>"btn btn-default btn-lg" %>
+<%= link_to 'Alle Institutionen', institutions_path, :class=>"btn btn-default btn-lg"%>
+
+
+
 </div>
