@@ -1,20 +1,44 @@
 <div class="center jumbotron">
+	<p id="notice"><%= notice %></p>
 
-<p id="notice"><%= notice %></p>
-
-<p>
+<p class="left">
+  <strong>Nachname:</strong>
+  <%= @contact.last_name %>
+</p>
+<p class="left">
   <strong>Vorname:</strong>
   <%= @contact.first_name %>
 </p>
 
-<p>
-  <strong>Nachname:</strong>
-  <%= @contact.last_name %>
+<p class="left">
+  <strong>Anrede:</strong>
+  <%= @contact.form_of_address %>
 </p>
 
-<p>
+
+<p class="left">
+  <strong>Position:</strong>
+  <%= @contact.position %>
+</p>
+
+<p class="left">
   <strong>Email:</strong>
   <%= @contact.emails.map { |e| e.value}.join(", ") %>
+</p>
+
+<p class="left">
+  <strong>Festnetz:</strong>
+  <%= @contact.landline %>
+</p>
+
+<p class="left">
+  <strong>Mobil:</strong>
+  <%= @contact.mobile %>
+</p>
+
+<p class="left">
+  <strong>Fax:</strong>
+  <%= @contact.fax %>
 </p>
 
 <%= link_to "Kontakt bearbeiten".html_safe, edit_contact_path(@contact), :id=>"open-contacts-dialog-btn", :class=>"btn btn-default btn-lg" %>
