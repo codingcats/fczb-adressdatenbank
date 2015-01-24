@@ -18,7 +18,7 @@
         <td><%= occasion.name %></td>
         <td><%= link_to 'Anzeigen', occasion %></td>
         <td><%= link_to 'Bearbeiten', edit_occasion_path(occasion) %></td>
-        <td><%= link_to 'Löschen', occasion, method: :delete, data: { confirm: 'Wollen Sie den Kontaktanlass wirklich löschen?' } %></td>
+        <td><%= link_to 'Löschen', occasion, method: :delete, data: { confirm: 'Möchten Sie den Anlass wirklich löschen?' } %></td>
       </tr>
     <% end %>
   </tbody>

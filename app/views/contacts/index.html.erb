@@ -32,7 +32,7 @@
         <td><%= contact.fax %></td>
         <td><%= link_to 'Anzeigen', contact %></td>
         <td><%= link_to 'Bearbeiten', edit_contact_path(contact) %></td>
-        <td><%= link_to 'Löschen', contact, method: :delete, data: { confirm: 'Wirklich löschen?' } %></td>
+        <td><%= link_to 'Löschen', contact, method: :delete, data: { confirm: 'Möchten Sie den Kontakt wirklich löschen?' } %></td>
       </tr>
     <% end %>
   </tbody>

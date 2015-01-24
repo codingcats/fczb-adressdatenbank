@@ -27,7 +27,7 @@
         <td><%= institution.comment %></td>
         <td><%= link_to 'Anzeigen', institution %></td>
         <td><%= link_to 'Bearbeiten', edit_institution_path(institution) %></td>
-        <td><%= link_to 'Löschen', institution, method: :delete, data: { confirm: 'Wirklich löschen?' } %></td>
+        <td><%= link_to 'Löschen', institution, method: :delete, data: { confirm: 'Möchten Sie die Institution wirklich löschen?' } %></td>
       </tr>
     <% end %>
   </tbody>

@@ -38,7 +38,7 @@ $( document ).ready(function() {
   // Löschen über Checkbox bei Submit (mit Sicherheitsabfragefenster)
   $('#submit-contact-detail').click(function(e){
     if ($("form input:checkbox:checked").length >0 ){
-      if (!confirm('Möchten Sie die markierten Emailadressen löschen?')) {
+      if (!confirm('Möchten Sie die markierte(n) E-Mail-Adresse(n) löschen?')) {
         e.preventDefault();
       }
     }
