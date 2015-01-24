@@ -1,5 +1,6 @@
 class InstitutionsController < ApplicationController
-  
+  before_action :set_institution, only: [:show, :edit, :update, :destroy]
+
   def index
     @institutions = Institution.all
   end
@@ -36,9 +37,24 @@ class InstitutionsController < ApplicationController
   	end
  	end
 
+# DELETE /institution/1
+  # DELETE /institution/1.json
+  def destroy
+    @institution.destroy
+    respond_to do |format|
+      format.html { redirect_to institutions_url, notice: 'Institution wurde erfolgreich gelöscht.' }
+      format.json { head :no_content }
+    end
+  end
+
   private
   	# Never trust parameters from the scary internet, only allow the white list through.
     def institution_params
       params.require(:institution).permit(:name, :street, :postcode, :city, :website, :comment)
     end
+
+  def set_institution
+    @institution = Institution.find(params[:id])
+  end
+
 end
