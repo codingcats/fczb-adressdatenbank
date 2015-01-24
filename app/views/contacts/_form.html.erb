@@ -69,6 +69,13 @@
     <% end %>
   </div>
 
+  <div class="field">
+    <%= f.label :Anlässe %><br>
+    <%= f.fields_for :occasions do |builder| %>
+    <%= builder.collection_select(:occasion_id, Occasion.all, :id, :name) %>
+    <% end %>
+  </div>
+
 
 
   <div class="actions">
