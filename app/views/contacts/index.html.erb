@@ -1,5 +1,5 @@
 <div class="center jumbotron">
-  
+
 <h1>Alle Kontakte</h1>
 <p>&nbsp;</p>
 
@@ -14,8 +14,15 @@
       <th>Email &nbsp;</th>
       <th>Festnetz &nbsp;</th>
       <th>Mobil &nbsp;</th>
-      <th>Fax &nbsp;</th>  
-      <th colspan="8"></th>
+      <th>Fax &nbsp;</th>
+      <th>Institution &nbsp;</th>
+      <th>Straße &nbsp;</th>
+      <th>Plz &nbsp;</th>
+      <th>Ort &nbsp;</th>
+      <th>Webseite &nbsp;</th>
+      <th>Kommentar &nbsp;</th>
+      <th>Kontaktanlässe &nbsp;</th>
+      <th colspan="15"></th>
     </tr>
   </thead>
 
@@ -30,6 +37,13 @@
         <td><%= contact.landline %></td>
         <td><%= contact.mobile %></td>
         <td><%= contact.fax %></td>
+        <td><%= contact.institution.present? ? contact.institution.name : "fehlt" %></td>
+        <td><%= contact.institution.present? ? contact.street.name : "fehlt" %></td>
+        <td><%= contact.institution.present? ? contact.institution.postcode : "fehlt" %></td>
+        <td><%= contact.institution.present? ? contact.institution.city : "fehlt" %></td>
+        <td><%= contact.institution.present? ? contact.institution.website : "fehlt" %></td>
+        <td><%= contact.institution.present? ? contact.institution.comment : "fehlt" %></td>
+        <td><%= contact.occasions.present? ? contact.occasions.name : "fehlt" %></td>
         <td><%= link_to 'Anzeigen', contact %></td>
         <td><%= link_to 'Bearbeiten', edit_contact_path(contact) %></td>
         <td><%= link_to 'Löschen', contact, method: :delete, data: { confirm: 'Wirklich löschen?' } %></td>
