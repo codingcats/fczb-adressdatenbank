@@ -3,18 +3,78 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Vorname:</strong>
-  <%= @contact.first_name %>
-</p>
-
-<p>
   <strong>Nachname:</strong>
   <%= @contact.last_name %>
 </p>
 
 <p>
+  <strong>Vorname:</strong>
+  <%= @contact.first_name %>
+</p>
+
+<p>
+  <strong>Anrede:</strong>
+  <%= @contact.form_of_address %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @contact.position %>
+</p>
+
+<p>
   <strong>Email:</strong>
   <%= @contact.emails.map { |e| e.value}.join(", ") %>
+</p>
+
+<p>
+  <strong>Festnetz:</strong>
+  <%= @contact.landline %>
+</p>
+
+<p>
+  <strong>Mobil:</strong>
+  <%= @contact.mobile %>
+</p>
+
+<p>
+  <strong>Fax:</strong>
+  <%= @contact.fax %>
+</p>
+
+<p>
+  <strong>Institution:</strong>
+  <%= @contact.institution.present? ? @contact.institution.name : "" %>
+</p>
+
+<p>
+  <strong>Straße:</strong>
+  <%= @contact.institution.present? ? @contact.institution.street : "" %>
+</p>
+
+<p>
+  <strong>PLZ:</strong>
+  <%= @contact.institution.present? ? @contact.institution.postcode : "" %>
+</p>
+
+<p>
+  <strong>Ort:</strong>
+  <%= @contact.institution.present? ? @contact.institution.city : "" %>
+</p>
+
+<p>
+  <strong>Webseite:</strong>
+  <%= @contact.institution.present? ? @contact.institution.website : "" %>
+</p>
+
+<p>
+  <strong>Kommentar:</strong>
+  <%= @contact.institution.present? ? @contact.institution.comment : "" %>
+</p>
+
+<p>
+  <strong>Anlässe:</strong>
+  <%= @contact.occasions.present? ? @contact.occasions.name.map { |e| e.value}.join(", ") : "" %>
 </p>
 
 <%= link_to "Kontakt bearbeiten".html_safe, edit_contact_path(@contact), :id=>"open-contacts-dialog-btn", :class=>"btn btn-default btn-lg" %>
