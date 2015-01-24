@@ -1,5 +1,6 @@
 class ContactsController < ApplicationController
   before_action :set_contact, only: [:show, :edit, :update, :destroy]
+  before_action :set_institution_and_occasion, only: [:new, :edit]
 
   # GET /contacts
   # GET /contacts.json
@@ -70,6 +71,11 @@ class ContactsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def contact_params
-      params.require(:contact).permit(:first_name, :last_name, :form_of_address, :position, :landline, :mobile, :fax, emails_attributes: [:value, :id, :_destroy])
+      params.require(:contact).permit(:first_name, :last_name, :form_of_address, :position, :landline, :mobile, :fax, :institution_id, :occasion_ids => [], emails_attributes: [:value, :id, :_destroy])
+    end
+
+    def set_institution_and_occasion
+      @institutions = Institution.all
+      @occasions = Occasion.all
     end
 end

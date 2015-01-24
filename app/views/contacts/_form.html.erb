@@ -11,9 +11,9 @@
     </div>
   <% end %>
 
+  <div class="field">
+  </div>    
 
-  <div class="field">    
-  
   <div class="left field">
     <%= f.label :Nachname %><br>
     <%= f.text_field :last_name %>
@@ -62,10 +62,19 @@
     <%= f.text_field :fax %>
   </div>
 
-  
+  <div class="field">
+    <%= f.label :Institution %><br>
+    <%= collection_select(:contact, :institution_id, @institutions, :id, :name) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Anlässe %><br>
+    <%= f.collection_select(:occasion_ids, @occasions, :id, :name, {}, {:multiple =>true}) %>
+  </div>
+
+
 
   <div class="actions">
     <%= f.submit "Datensatz speichern",  :id => "submit-contact-detail", :class=> "btn btn-success btn-sm" %>
   </div>
 <% end %>
-

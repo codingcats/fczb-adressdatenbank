@@ -5,6 +5,7 @@
   <strong>Nachname:</strong>
   <%= @contact.last_name %>
 </p>
+
 <p class="left">
   <strong>Vorname:</strong>
   <%= @contact.first_name %>
@@ -14,7 +15,6 @@
   <strong>Anrede:</strong>
   <%= @contact.form_of_address %>
 </p>
-
 
 <p class="left">
   <strong>Position:</strong>
@@ -41,6 +41,41 @@
   <%= @contact.fax %>
 </p>
 
-<%= link_to "bearbeiten".html_safe, edit_contact_path(@contact), :id=>"open-contacts-dialog-btn", :class=>"btn btn-default btn-lg" %>
+<p class="left">
+  <strong>Institution:</strong>
+  <%= @contact.institution.present? ? @contact.institution.name : "" %>
+</p>
+
+<p class="left">
+  <strong>Straße:</strong>
+  <%= @contact.institution.present? ? @contact.institution.street : "" %>
+</p>
+
+<p class="left">
+  <strong>PLZ:</strong>
+  <%= @contact.institution.present? ? @contact.institution.postcode : "" %>
+</p>
+
+<p class="left">
+  <strong>Ort:</strong>
+  <%= @contact.institution.present? ? @contact.institution.city : "" %>
+</p>
+
+<p class="left">
+  <strong>Webseite:</strong>
+  <%= @contact.institution.present? ? @contact.institution.website : "" %>
+</p>
+
+<p class="left">
+  <strong>Kommentar:</strong>
+  <%= @contact.institution.present? ? @contact.institution.comment : "" %>
+</p>
+
+<p class="left">
+  <strong>Anlässe:</strong>
+  <%= @contact.occasions.present? ? @contact.occasion_names.join(", ") : "" %>
+</p>
+
+<%= link_to "Bearbeiten".html_safe, edit_contact_path(@contact), :id=>"open-contacts-dialog-btn", :class=>"btn btn-default btn-lg" %>
 <%= link_to "Alle Kontakte".html_safe, contacts_path, :id=>"open-contacts-dialog-btn", :class=>"btn btn-default btn-lg" %>
 </div>
