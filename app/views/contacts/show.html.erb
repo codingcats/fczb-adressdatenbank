@@ -74,7 +74,7 @@
 
 <p>
   <strong>Anlässe:</strong>
-  <%= @contact.occasions.present? ? @contact.occasions.map { |e| e.name}.join(", ") : "" %>
+  <%= @contact.occasions.present? ? @contact.occasion_names.join(", ") : "" %>
 </p>
 
 <%= link_to "Kontakt bearbeiten".html_safe, edit_contact_path(@contact), :id=>"open-contacts-dialog-btn", :class=>"btn btn-default btn-lg" %>

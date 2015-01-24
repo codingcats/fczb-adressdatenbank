@@ -33,7 +33,7 @@
         <td><%= contact.last_name %></td>
         <td><%= contact.form_of_address %></td>
         <td><%= contact.position %></td>
-        <td><%= contact.emails.map { |e| e.value}.join(", ") %></td>
+        <td><%= contact.email_addresses.join(", ") %></td>
         <td><%= contact.landline %></td>
         <td><%= contact.mobile %></td>
         <td><%= contact.fax %></td>
@@ -43,7 +43,7 @@
         <td><%= contact.institution.present? ? contact.institution.city : "" %></td>
         <td><%= contact.institution.present? ? contact.institution.website : "" %></td>
         <td><%= contact.institution.present? ? contact.institution.comment : "" %></td>
-        <td><%= contact.occasions.present? ? contact.occasions.name : "" %></td>
+        <td><%= contact.occasions.present? ? contact.occasion_names.join(", ") : "" %></td>
         <td><%= link_to 'Anzeigen', contact %></td>
         <td><%= link_to 'Bearbeiten', edit_contact_path(contact) %></td>
         <td><%= link_to 'Löschen', contact, method: :delete, data: { confirm: 'Wirklich löschen?' } %></td>

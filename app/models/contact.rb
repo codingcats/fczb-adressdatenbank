@@ -6,4 +6,16 @@ class Contact < ActiveRecord::Base
     belongs_to :institution
     has_and_belongs_to_many :occasions
     accepts_nested_attributes_for :emails, :allow_destroy => true
+
+    def occasion_names
+      self.occasions.map do | occasion |
+        occasion.name
+      end
+    end
+
+    def email_addresses
+      self.emails.map do | email |
+        email.value
+      end
+    end
 end
