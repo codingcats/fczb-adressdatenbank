@@ -18,4 +18,13 @@ class Contact < ActiveRecord::Base
         email.value
       end
     end
+
+    def institution
+    	if super.present?
+    		super
+    	else
+    		NullObject.new
+    	end
+    end
+
 end

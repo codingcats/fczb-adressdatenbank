@@ -1,6 +1,6 @@
 class ContactsController < ApplicationController
   before_action :set_contact, only: [:show, :edit, :update, :destroy]
-  before_action :set_institution_and_occasion, only: [:show, :edit]
+  before_action :set_institution_and_occasion, only: [:new, :edit]
 
   # GET /contacts
   # GET /contacts.json

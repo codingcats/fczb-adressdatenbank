@@ -64,12 +64,12 @@
 
   <div class="field">
     <%= f.label :Institution %><br>
-    <%= collection_select(:contact, :institution_id, @institution, :id, :name) %>
+    <%= collection_select(:contact, :institution_id, @institutions, :id, :name) %>
   </div>
 
   <div class="field">
     <%= f.label :Anlässe %><br>
-    <%= f.collection_select(:occasion_ids, @occasion, :id, :name, {}, {:multiple =>true}) %>
+    <%= f.collection_select(:occasion_ids, @occasions, :id, :name, {}, {:multiple =>true}) %>
   </div>
 
 
