@@ -3,6 +3,16 @@
 <h1>Liste aller Kontakte</h1>
 <p>&nbsp;</p>
 
+<div>
+  <form method="GET" action="<%= contacts_path %>">
+    <button name="last_name">Nachname</button>
+    <button name="postcode">PLZ</button>
+    <button name="institution">Institution</button>
+    <select>
+      <option value="asc">aufsteigend</option>
+      <option value="desc">absteigend</option>
+    </select>
+</div>
 
 <table class="table table-condensed table-striped">
   <thead>
