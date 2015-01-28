@@ -7,8 +7,8 @@
 <table class="table table-condensed table-striped">
   <thead>
     <tr>
-      <th>Vorname &nbsp;</th>
       <th>Nachname &nbsp;</th>
+      <th>Vorname &nbsp;</th>
       <th>Anrede &nbsp;</th>
       <th>Position &nbsp;</th>
       <th>E-Mail &nbsp;</th>
@@ -29,8 +29,8 @@
   <tbody>
     <% @contacts.each do |contact| %>
       <tr>
-        <td><%= contact.first_name %></td>
         <td><%= contact.last_name %></td>
+        <td><%= contact.first_name %></td>
         <td><%= contact.form_of_address %></td>
         <td><%= contact.position %></td>
         <td><%= contact.email_addresses.join(", ") %></td>
