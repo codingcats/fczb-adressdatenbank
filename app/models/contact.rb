@@ -4,6 +4,7 @@ class Contact < ActiveRecord::Base
 
     has_many :emails
     belongs_to :institution
+    scope :institution_asc, -> { joins("LEFT JOIN 'institutions' ON contacts.institution_id = institutions.id").order('institutions.name') }
     has_and_belongs_to_many :occasions
     accepts_nested_attributes_for :emails, :allow_destroy => true
 
