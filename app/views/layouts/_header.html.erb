@@ -1,20 +1,42 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
-  	
+
     <div class="container">
   		<%= link_to "FCZB Kontaktdatenbank", root_path, id: "logo" %>
-      
+
       <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Startseite", root_path %></li>
+        <li><%= link_to "Handbuch", static_pages_handbook_path %></li>
         <% if logged_in? %>
-          <li><%= link_to "Nutzerin", '#' %></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Neu <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <li><%= link_to "Kontakt", new_contact_path %></li>
+              <li><%= link_to "Institution", new_institution_path %></li>
+              <li><%= link_to "Anlass", new_occasion_path %></li>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Übersicht <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <li><%= link_to "Kontakte", contacts_path %></li>
+              <li><%= link_to "Institutionen", institutions_path %></li>
+              <li><%= link_to "Anlässe", occasions_path %></li>
+            </li>
+          </ul>
+        </li>
+
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              Account <b class="caret"></b>
+              Nutzerin <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-              <li><%= link_to "Einstellungen", '#' %></li>
-              <li class="divider"></li>
               <li>
                 <%= link_to "Ausloggen", logout_path, method: "delete" %>
               </li>
@@ -27,4 +49,3 @@
     </nav>
   	</div>
   </header>
-
