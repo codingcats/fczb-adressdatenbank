@@ -7,6 +7,8 @@ class Contact < ActiveRecord::Base
     has_and_belongs_to_many :occasions
     accepts_nested_attributes_for :emails, :allow_destroy => true
 
+    acts_as_paranoid
+
     def occasion_names
       self.occasions.map do | occasion |
         occasion.name
