@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150124112213) do
+ActiveRecord::Schema.define(version: 20150128204101) do
 
   create_table "contacts", force: true do |t|
     t.string   "first_name"
@@ -24,7 +24,10 @@ ActiveRecord::Schema.define(version: 20150124112213) do
     t.string   "landline"
     t.string   "mobile"
     t.string   "fax"
+    t.datetime "deleted_at"
   end
+
+  add_index "contacts", ["deleted_at"], name: "index_contacts_on_deleted_at"
 
   create_table "contacts_occasions", id: false, force: true do |t|
     t.integer "contact_id",  null: false
@@ -36,7 +39,10 @@ ActiveRecord::Schema.define(version: 20150124112213) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "contact_id"
+    t.datetime "deleted_at"
   end
+
+  add_index "emails", ["deleted_at"], name: "index_emails_on_deleted_at"
 
   create_table "institutions", force: true do |t|
     t.string   "name"
@@ -47,14 +53,20 @@ ActiveRecord::Schema.define(version: 20150124112213) do
     t.datetime "updated_at"
     t.string   "website"
     t.string   "comment"
+    t.datetime "deleted_at"
   end
+
+  add_index "institutions", ["deleted_at"], name: "index_institutions_on_deleted_at"
 
   create_table "occasions", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "dispatch_mode"
+    t.datetime "deleted_at"
   end
+
+  add_index "occasions", ["deleted_at"], name: "index_occasions_on_deleted_at"
 
   create_table "users", force: true do |t|
     t.string   "name"
