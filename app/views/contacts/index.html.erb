@@ -3,11 +3,10 @@
 <h1>Liste aller Kontakte</h1>
 <p>&nbsp;</p>
 
-
 <table class="table table-condensed table-striped">
   <thead>
     <tr>
-      <th>Nachname &nbsp;</th>
+      <th><%= sortable "last_name", "Nachname" %>&nbsp;</th>
       <th>Vorname &nbsp;</th>
       <th>Anrede &nbsp;</th>
       <th>Position &nbsp;</th>
@@ -15,9 +14,9 @@
       <th>Festnetz &nbsp;</th>
       <th>Mobil &nbsp;</th>
       <th>Fax &nbsp;</th>
-      <th>Institution &nbsp;</th>
+      <th><%= sortable "institution", "Institution"%>&nbsp;</th>
       <th>Straße &nbsp;</th>
-      <th>Plz &nbsp;</th>
+      <th><%= sortable "postcode", "PLZ" %>&nbsp;</th>
       <th>Ort &nbsp;</th>
       <th>Webseite &nbsp;</th>
       <th>Kommentar &nbsp;</th>
