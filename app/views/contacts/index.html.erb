@@ -6,8 +6,8 @@
 <table class="table table-condensed table-striped">
   <thead>
     <tr>
-      <th>Vorname &nbsp;</th>
       <th><%= sortable "last_name", "Nachname" %>&nbsp;</th>
+      <th>Vorname &nbsp;</th>
       <th>Anrede &nbsp;</th>
       <th>Position &nbsp;</th>
       <th>E-Mail &nbsp;</th>
@@ -28,8 +28,8 @@
   <tbody>
     <% @contacts.each do |contact| %>
       <tr>
-        <td><%= contact.first_name %></td>
         <td><%= contact.last_name %></td>
+        <td><%= contact.first_name %></td>
         <td><%= contact.form_of_address %></td>
         <td><%= contact.position %></td>
         <td><%= contact.email_addresses.join(", ") %></td>
@@ -43,9 +43,9 @@
         <td><%= contact.institution.website %></td>
         <td><%= contact.institution.comment %></td>
         <td><%= contact.occasions.present? ? contact.occasion_names.join(", ") : "" %></td>
-        <td><%= link_to 'Anzeigen', contact %></td>
-        <td><%= link_to 'Bearbeiten', edit_contact_path(contact) %></td>
-        <td><%= link_to 'Löschen', contact, method: :delete, data: { confirm: 'Möchten Sie den Kontakt wirklich löschen?' } %></td>
+        <td><%= link_to "", contact, :class=>'glyphicon glyphicon-eye-open btn btn-default btn-xs' %></td>
+        <td><%= link_to "", edit_contact_path(contact), :class=>'glyphicon glyphicon-pencil btn btn-default btn-xs' %></td>
+        <td><%= link_to "", contact, method: :delete, data: { confirm: 'Möchten Sie den Kontakt wirklich löschen?' }, :class=>'glyphicon glyphicon-trash btn btn-default btn-xs' %></td>
       </tr>
     <% end %>
   </tbody>

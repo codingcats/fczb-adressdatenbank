@@ -16,9 +16,9 @@
     <% @occasions.each do |occasion| %>
       <tr>
         <td><%= occasion.name %></td>
-        <td><%= link_to 'Anzeigen', occasion %></td>
-        <td><%= link_to 'Bearbeiten', edit_occasion_path(occasion) %></td>
-        <td><%= link_to 'Löschen', occasion, method: :delete, data: { confirm: 'Möchten Sie den Anlass wirklich löschen?' } %></td>
+        <td><%= link_to "", occasion, :class=>'glyphicon glyphicon-eye-open btn btn-default btn-xs' %></td>
+        <td><%= link_to "", edit_occasion_path(occasion), :class=>'glyphicon glyphicon-pencil btn btn-default btn-xs' %></td>
+        <td><%= link_to "", occasion, method: :delete, data: { confirm: 'Möchten Sie den Anlass wirklich löschen?' }, :class=>'glyphicon glyphicon-trash btn btn-default btn-xs' %></td>
       </tr>
     <% end %>
   </tbody>

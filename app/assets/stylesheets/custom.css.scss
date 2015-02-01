@@ -33,27 +33,27 @@ textarea {
 }
 
 .jumbotron {
-   margin: 20px;
+   margin: 10px;
 }
 
 .jumbotron .container {
   padding-left: 30px;
   padding-right: 30px;
   border-radius: 60px;
- 
+
 }
 
 td {
   padding: 10px;
   text-align: left;
-  vertical-align:middle;	
+  vertical-align:middle;
 }
 
 /* header */
 
 .navbar {
   background-color: #dd3333;
-  border-color: #000000; 
+  border-color: #000000;
 }
 
 .navbar .container {
@@ -62,6 +62,15 @@ td {
   text-align: middle;
 }
 
+.nav.navbar-nav.navbar-right li a {
+  color: white;
+}
+
+.dropdown-menu > li > a {
+  text-decoration: none;
+  color: #dd3333;
+  background-color: #dd3333;
+}
 
 #logo {
   float: left;
@@ -211,5 +220,3 @@ input {
   line-height: 2px;
   margin-top: 2px;
 }
-
-
