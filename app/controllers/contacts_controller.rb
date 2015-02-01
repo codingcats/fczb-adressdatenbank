@@ -6,7 +6,7 @@ class ContactsController < ApplicationController
   # GET /contacts
   # GET /contacts.json
   def index
-    @contacts = Contact.order("#{sort_column} #{sort_direction}")
+    @contacts = ordered_contacts
   end
 
   # GET /contacts/1
@@ -80,11 +80,26 @@ class ContactsController < ApplicationController
       @occasions = Occasion.all
     end
 
+    def sortable_attributes
+      Contact.column_names + ['institution', 'postcode']
+    end
+
     def sort_column
-      Contact.column_names.include?(params[:sort]) ? params[:sort] : 'last_name'
+      sortable_attributes.include?(params[:sort]) ? params[:sort] : 'last_name'
     end
 
     def sort_direction
       %w[asc desc].include?(params[:direction]) ? params[:direction] : 'asc'
+    end
+
+    def ordered_contacts
+      case sort_column
+      when "institution"
+        Contact.order_institution(sort_direction)
+      when "postcode"
+        Contact.order_postcode(sort_direction)
+      else 
+        Contact.order("#{sort_column} #{sort_direction}")
+      end
     end
 end
