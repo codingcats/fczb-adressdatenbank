@@ -29,7 +29,6 @@ textarea {
 
 .center h1 {
   margin-bottom: 10px;
-
 }
 
 .jumbotron {
@@ -37,17 +36,24 @@ textarea {
 }
 
 .jumbotron .container {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
   border-radius: 60px;
-
 }
 
 td {
   padding: 10px;
   text-align: left;
-  vertical-align:middle;
+  vertical-align: middle;
 }
+
+/* Custom container */
+
+.container-full {
+  margin: 0 auto;
+  width: 100%;
+}
+
 
 /* header */
 
@@ -96,7 +102,6 @@ td {
   text-decoration: none;
 }
 
-
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -118,6 +123,7 @@ h2 {
   font-weight: normal;
   color: #777;
 }
+
 h3 {
   font-size: 1.5em;
   letter-spacing: -1px;
@@ -131,18 +137,6 @@ p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
-
-th {
-  font-size: 1.5em;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  padding: 10px;
-  text-align: left;
-  font-weight: normal;
-  color: #777;
-  background-color: #ffffff;
-}
-
 
 
 /* sidebar */
@@ -216,14 +210,4 @@ input {
 #session_remember_me {
   width: auto;
   margin-left: 0;
-}
-
-/* footer */
-
-#fussi{
-  background-color: #ffffff;
-  color: #000000;
-  text-align: right;
-  line-height: 2px;
-  margin-top: 2px;
 }
