@@ -3,31 +3,20 @@
 <h1>Liste aller Kontakte</h1>
 <p>&nbsp;</p>
 
-<div>
-  <form method="GET" action="<%= contacts_path %>">
-    <button name="last_name">Nachname</button>
-    <button name="postcode">PLZ</button>
-    <button name="institution">Institution</button>
-    <select>
-      <option value="asc">aufsteigend</option>
-      <option value="desc">absteigend</option>
-    </select>
-</div>
-
 <table class="table table-condensed table-striped">
   <thead>
     <tr>
       <th>Vorname &nbsp;</th>
-      <th>Nachname &nbsp;</th>
+      <th><%= sortable "last_name", "Nachname" %>&nbsp;</th>
       <th>Anrede &nbsp;</th>
       <th>Position &nbsp;</th>
       <th>E-Mail &nbsp;</th>
       <th>Festnetz &nbsp;</th>
       <th>Mobil &nbsp;</th>
       <th>Fax &nbsp;</th>
-      <th>Institution &nbsp;</th>
+      <th><%= sortable "institution", "Institution"%>&nbsp;</th>
       <th>Straße &nbsp;</th>
-      <th>Plz &nbsp;</th>
+      <th><% sortable "postcode", "PLZ" %>&nbsp;</th>
       <th>Ort &nbsp;</th>
       <th>Webseite &nbsp;</th>
       <th>Kommentar &nbsp;</th>

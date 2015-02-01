@@ -1,12 +1,12 @@
 class ContactsController < ApplicationController
   before_action :set_contact, only: [:show, :edit, :update, :destroy]
   before_action :set_institution_and_occasion, only: [:new, :edit]
+  helper_method :sort_column, :sort_direction
 
   # GET /contacts
   # GET /contacts.json
   def index
-    @contacts = Contact.institution_asc
-    puts params
+    @contacts = Contact.order("#{sort_column} #{sort_direction}")
   end
 
   # GET /contacts/1
@@ -78,5 +78,13 @@ class ContactsController < ApplicationController
     def set_institution_and_occasion
       @institutions = Institution.all
       @occasions = Occasion.all
+    end
+
+    def sort_column
+      Contact.column_names.include?(params[:sort]) ? params[:sort] : 'last_name'
+    end
+
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : 'asc'
     end
 end
