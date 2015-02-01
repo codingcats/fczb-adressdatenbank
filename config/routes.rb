@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-
-
   get 'static_pages/home'
   get 'static_pages/handbook'
 
@@ -17,5 +15,7 @@ Rails.application.routes.draw do
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
+
+  post 'contacts/search' => 'contacts#search', :as => :search_contacts
 
 end
