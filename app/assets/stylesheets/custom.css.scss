@@ -57,9 +57,11 @@ td {
 }
 
 .navbar .container {
+  background-color: #dd3333;
   float: left;
   margin-top: 1px;
   text-align: middle;
+
 }
 
 .nav.navbar-nav.navbar-right li a {
@@ -67,10 +69,15 @@ td {
 }
 
 .dropdown-menu > li > a {
-  text-decoration: none;
   color: #dd3333;
   background-color: #dd3333;
 }
+
+.dropdown-menu > li > a:hover {
+  color: #000000;
+  background-color: #bcbcbc;
+}
+
 
 #logo {
   float: left;
@@ -80,11 +87,11 @@ td {
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 15px;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 #logo:hover {
-  color: #ffffff;
+  color: #000000;
   background-color: #dd3333;
   text-decoration: none;
 }
