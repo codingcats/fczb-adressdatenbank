@@ -81,7 +81,7 @@ class ContactsController < ApplicationController
     end
 
     def sortable_attributes
-      Contact.column_names + ['institution', 'postcode']
+      ['last_name', 'institution', 'postcode']
     end
 
     def sort_column
