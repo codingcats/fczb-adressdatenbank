@@ -3,5 +3,5 @@
 <%- @contacts.each do |contact| -%>
 <%= CSV.generate_line([contact.last_name, contact.first_name,
   contact.form_of_address, contact.institution.name, contact.institution.street,
-  contact.institution.postcode, contact.institution.city, contact.emails]) %>
+  contact.institution.postcode, contact.institution.city, contact.email_addresses.join(", ")]).html_safe %>
 <%- end -%>
