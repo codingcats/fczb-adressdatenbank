@@ -7,6 +7,13 @@ class ContactsController < ApplicationController
   # GET /contacts.json
   def index
     @contacts = ordered_contacts
+    respond_to do |format|
+      format.html
+      format.csv do
+        headers['Content-Disposition'] = "attachment, filename=\"user-list\""
+        headers['Content-Type'] ||= 'text/csv'
+      end
+    end
   end
 
   # GET /contacts/1
@@ -98,7 +105,7 @@ class ContactsController < ApplicationController
         Contact.order_institution(sort_direction)
       when "postcode"
         Contact.order_postcode(sort_direction)
-      else 
+      else
         Contact.order("#{sort_column} #{sort_direction}")
       end
     end
