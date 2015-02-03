@@ -3,11 +3,10 @@
 </p>
 <p>&nbsp;</p>
 
-
 <table class="table table-condensed table-striped">
     <thead style="vertical-align:bottom">
     <tr>
-      <th style="vertical-align:bottom">Nachname &nbsp;</th>
+      <th><%= sortable "last_name", "Nachname" %>&nbsp;</th>
       <th>Vorname &nbsp;</th>
       <th>Anrede &nbsp;</th>
       <th>Position &nbsp;</th>
@@ -15,9 +14,9 @@
       <th>Festnetz &nbsp;</th>
       <th>Mobil &nbsp;</th>
       <th>Fax &nbsp;</th>
-      <th>Institution &nbsp;</th>
+      <th><%= sortable "institution", "Institution"%>&nbsp;</th>
       <th>Straße &nbsp;</th>
-      <th>PLZ &nbsp;</th>
+      <th><%= sortable "postcode", "PLZ" %>&nbsp;</th>
       <th>Ort &nbsp;</th>
       <th>Webseite &nbsp;</th>
       <th>Kommentar &nbsp;</th>
@@ -54,4 +53,7 @@
 <div class="center">
 <br>
 <%= link_to "Neuen Kontakt anlegen".html_safe, new_contact_path, :id=>"open-contacts-dialog-btn", :class=>"btn btn-default btn-lg" %>
+
+<%= link_to 'Download als CSV', contacts_path(format: :csv) %>
+
 </div>
