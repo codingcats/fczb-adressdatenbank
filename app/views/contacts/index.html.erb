@@ -1,11 +1,13 @@
-<h1>Liste aller Kontakte</h1>
+  <p class="titel">
+  <h1>Liste aller Kontakte</h1>
+</p>
 <p>&nbsp;</p>
 
 
 <table class="table table-condensed table-striped">
-  <thead>
+    <thead style="vertical-align:bottom">
     <tr>
-      <th>Nachname &nbsp;</th>
+      <th style="vertical-align:bottom">Nachname &nbsp;</th>
       <th>Vorname &nbsp;</th>
       <th>Anrede &nbsp;</th>
       <th>Position &nbsp;</th>
@@ -49,7 +51,7 @@
     <% end %>
   </tbody>
 </table>
-
+<div class="center">
 <br>
 <%= link_to "Neuen Kontakt anlegen".html_safe, new_contact_path, :id=>"open-contacts-dialog-btn", :class=>"btn btn-default btn-lg" %>
-
+</div>
