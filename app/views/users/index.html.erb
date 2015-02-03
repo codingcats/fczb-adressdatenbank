@@ -1,5 +1,7 @@
 <div class="center jumbotron">
 
+  <p id="notice"><%= notice %></p>
+
   <h1>Userinnen</h1>
 
   <p>&nbsp;<p>
@@ -13,11 +15,11 @@
       </thead>
 
       <tbody>
-        <% @users.each do |users| %>
+        <% @user.each do |users| %>
         <tr>
           <td><%= users.username %></td>
           <td><%= link_to "Bearbeiten", edit_user_path(users) %></td>
-          <td><%= link_to "Löschen", new_user_path(users), method: :delete, data: { confirm: "Willst du diese Userin löschen?" } %></td>
+          <td><%= link_to "Löschen", users, method: :delete, data: { confirm: "Wollen Sie diese Userin löschen?" } %></td>
         </tr>
         <% end %>
       </tbody>
@@ -25,5 +27,5 @@
 
     <br>
 
-    <%= link_to "Neue Userin anlegen".html_safe, 'user#new', :id=>"open-contacts-dialog-btn", :class=>"btn btn-default btn-lg" %>
+    <%= link_to "Neue Userin anlegen".html_safe, new_user_path, :id=>"open-contacts-dialog-btn", :class=>"btn btn-default btn-lg" %>
   </div>
