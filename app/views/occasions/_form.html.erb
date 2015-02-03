@@ -1,3 +1,4 @@
+<div class="center container">
 <%= form_for(@occasion) do |f| %>
   <% if @occasion.errors.any? %>
     <div id="error_explanation">
@@ -19,3 +20,4 @@
     <%= f.submit "Datensatz speichern", :class=> "btn btn-success btn-sm" %>
   </div>
 <% end %>
+</div>

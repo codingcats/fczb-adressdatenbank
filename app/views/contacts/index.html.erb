@@ -1,10 +1,10 @@
-<div class="center jumbotron">
-
-<h1>Liste aller Kontakte</h1>
+  <p class="titel">
+  <h1>Liste aller Kontakte</h1>
+</p>
 <p>&nbsp;</p>
 
 <table class="table table-condensed table-striped">
-  <thead>
+    <thead style="vertical-align:bottom">
     <tr>
       <th><%= sortable "last_name", "Nachname" %>&nbsp;</th>
       <th>Vorname &nbsp;</th>
@@ -21,7 +21,7 @@
       <th>Webseite &nbsp;</th>
       <th>Kommentar &nbsp;</th>
       <th>Kontaktanlässe &nbsp;</th>
-      <th colspan="15"></th>
+      <th colspan="3"></th>
     </tr>
   </thead>
 
@@ -50,8 +50,10 @@
     <% end %>
   </tbody>
 </table>
-
+<div class="center">
 <br>
 <%= link_to "Neuen Kontakt anlegen".html_safe, new_contact_path, :id=>"open-contacts-dialog-btn", :class=>"btn btn-default btn-lg" %>
+
 <%= link_to 'Download als CSV', contacts_path(format: :csv) %>
+
 </div>
