@@ -12,8 +12,7 @@ class SessionsController < ApplicationController
       params[:session][:remember_me] == '1' ? remember(user) : forget(user)
       redirect_to static_pages_home_path
     else
-      flash.now[:danger] = 'Username/Passwort Kombination inkorrekt.'
-      render 'new'
+      redirect_to login_path, notice: 'Username/Passwort Kombination inkorrekt.'
     end
   end
 
