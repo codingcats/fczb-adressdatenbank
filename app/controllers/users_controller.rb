@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  before_action :admin_user, only: [:index, :edit, :update, :destroy]
+  before_action :admin_user, only: [:index, :new, :show, :edit, :create, :update, :destroy]
 
 
   def index
@@ -41,7 +41,7 @@ class UsersController < ApplicationController
 
   def destroy
     @user = User.find(params[:id])
-    
+
     @user.destroy
     respond_to do |format|
       format.html { redirect_to users_url, notice: 'Userin wurde erfolgreich gelöscht.' }
