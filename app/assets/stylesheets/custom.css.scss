@@ -61,11 +61,16 @@ th.mah {
 
 /* Required field */
 
-
 .form-group.required .control-label:after {
-  content:"*";
+  content:" *";
   color:red;
   weight: bold;
+}
+
+.req {
+  font-size: 1.0em;
+  color:red;
+  font-weight: normal;
 }
 
 /* Custom container */
