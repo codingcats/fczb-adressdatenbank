@@ -11,7 +11,7 @@ cd fczb-adressdatenbank
 gem install bundler
 bundle install
 
-[configure your datebase]
+[configure your database]
 [configure the application]
 
 bundle exec rake db:migrate
