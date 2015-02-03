@@ -1,15 +1,31 @@
 class UsersController < ApplicationController
-  def show
-    @user = User.find(params[:id])
+
+  before_action :admin_user,     only: [:index, :edit, :update, :destroy]
+
+
+  def index
+    @users = User.all
   end
 
   def new
-    @user = User.new
+    @users = User.new
   end
-  
-  def index
-    @user = User.all
+
+  def edit
+    @users = User.find(params[:id])
   end
-  
-  
+
+  def show
+    @users = User.find(params[:id])
+  end
+
+
+  private
+
+  # Confirms an admin user.
+  def admin_user
+    redirect_to(root_url) unless current_user.admin?
+  end
+
+
 end
