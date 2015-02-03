@@ -1,3 +1,4 @@
+<div class="form-group required">
 <%= form_for(@contact) do |f| %>
   <% if @contact.errors.any? %>
     <div id="error_explanation">
@@ -11,15 +12,13 @@
     </div>
   <% end %>
 
-  <div class="field">
-  </div>
 
-  <div class="left field">
-    <%= f.label :Nachname %><br>
+<div class="left field">
+    <%= f.label :Nachname, :id => "form-group required", :class=> "col-md-12 control-label" %><br>
     <%= f.text_field :last_name %>
-  </div>
+</div>
   <div class="left field">
-    <%= f.label :Vorname %><br>
+    <%= f.label :Vorname, :id => "form-group required", :class=> "col-md-12 control-label" %><br>
     <%= f.text_field :first_name %>
   </div>
   <div class="left field">
@@ -34,7 +33,7 @@
   <div class="field left email-container">
     <table>
       <thead>
-        <th><%= f.label :Email %></th>
+        <th><%= f.label :Email, :id => "form-group required", :class=> "form-group required col-md-12 control-label" %></th>
         <th>Löschen</th>
       </thead>
       <tbody>

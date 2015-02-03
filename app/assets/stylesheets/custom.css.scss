@@ -53,15 +53,19 @@ td {
 
 /* Contacts table */
 
-th {
-  text-align: middle !important;
-}
-
 th.mah {
   weight: normal;
   color: #dd3333;
   background-color: #fefefe;
-  text-align: middle !important;
+}
+
+/* Required field */
+
+
+.form-group.required .control-label:after {
+  content:"*";
+  color:red;
+  weight: bold;
 }
 
 /* Custom container */
