@@ -2,7 +2,7 @@
     <div class="jumbotron">
 
   <h1>Liste aller Kontakte</h1>
-  
+
 <p>&nbsp;</p>
 
 <table class="table table-condensed table-striped" border="0">
@@ -42,6 +42,6 @@
 <br>
 <%= link_to "Neuen Kontakt anlegen".html_safe, new_contact_path, :id=>"open-contacts-dialog-btn", :class=>"btn btn-default btn-lg" %>
 
-<%= link_to 'Download als CSV', contacts_path(format: :csv) %>
+<%= link_to 'Download als CSV', contacts_path(format: :csv), :id=>"open-contacts-dialog-btn", :class=>"btn btn-info btn-lg" %>
 
 </div>
