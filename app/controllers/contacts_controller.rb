@@ -1,6 +1,6 @@
 class ContactsController < ApplicationController
   before_action :set_contact, only: [:show, :edit, :update, :destroy]
-  before_action :set_institution_and_occasion, only: [:new, :edit]
+  before_action :set_institution_and_occasion, only: [:new, :edit, :create]
   helper_method :sort_column, :sort_direction
 
   # GET /contacts
