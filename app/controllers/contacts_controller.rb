@@ -1,6 +1,6 @@
 class ContactsController < ApplicationController
   before_action :set_contact, only: [:show, :edit, :update, :destroy]
-  before_action :set_institution_and_occasion, only: [:new, :edit, :index]
+  before_action :set_institution_and_occasion, only: [:new, :edit, :index, :search]
   helper_method :sort_column, :sort_direction
 
   # GET /contacts
@@ -65,7 +65,10 @@ class ContactsController < ApplicationController
   end
 
   def search
-    redirect_to contacts_url
+    occasion_ids = params[:contact][:occasion_ids]
+    occasion_ids.find_all{|str| str.to_i.to_s == str}.map(&:to_i)
+    @contacts = Contact.filter_occasions(occasion_ids)
+    render 'index'
   end
 
   private
