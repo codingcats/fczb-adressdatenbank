@@ -1,3 +1,4 @@
+<div class="form-group required">
 <%= form_for(@contact) do |f| %>
   <% if @contact.errors.any? %>
     <div id="error_explanation">
@@ -11,15 +12,13 @@
     </div>
   <% end %>
 
-  <div class="field">
-  </div>
 
-  <div class="left field">
-    <%= f.label :Nachname %><br>
+<div class="left field">
+    <%= f.label :Nachname, :id => "form-group required", :class=> "col-md-12 control-label" %><br>
     <%= f.text_field :last_name %>
-  </div>
+</div>
   <div class="left field">
-    <%= f.label :Vorname %><br>
+    <%= f.label :Vorname, :id => "form-group required", :class=> "col-md-12 control-label" %><br>
     <%= f.text_field :first_name %>
   </div>
   <div class="left field">
@@ -34,7 +33,7 @@
   <div class="field left email-container">
     <table>
       <thead>
-        <th><%= f.label :Email %></th>
+        <th><%= f.label :Email, :id => "form-group required", :class=> "form-group required col-md-12 control-label" %></th>
         <th>Löschen</th>
       </thead>
       <tbody>
@@ -61,17 +60,17 @@
     <%= f.label :Fax %><br>
     <%= f.text_field :fax %>
   </div>
-
-  <div class="field">
+  <div class="left field">
     <%= f.label :Institution %><br>
     <%= collection_select(:contact, :institution_id, @institutions, :id, :name, {include_blank: true}) %>
   </div>
 
-  <div class="field">
+  <div class="left field">
     <%= f.label :Anlässe %><br>
     <%= f.collection_select(:occasion_ids, @occasions, :id, :name, {}, {:multiple =>true}) %>
   </div>
 
+<div class="left req"><b>* </b>Pflichtfeld bitte ausf&uuml;llen.</div><br>
 
 
   <div class="actions">
