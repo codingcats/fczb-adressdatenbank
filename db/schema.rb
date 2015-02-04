@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 20150203103623) do
   create_table "institutions", force: true do |t|
     t.string   "name"
     t.string   "street"
-    t.string   "postcode"
+    t.integer  "postcode",   limit: 255
     t.string   "city"
     t.datetime "created_at"
     t.datetime "updated_at"
