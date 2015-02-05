@@ -2,7 +2,7 @@
 
   <p id="notice"><%= notice %></p>
 
-  <h1>Userinnen</h1>
+  <h1>Nutzerinnen</h1>
 
   <p>&nbsp;<p>
 
@@ -18,8 +18,8 @@
         <% @user.each do |users| %>
         <tr>
           <td><%= users.username %></td>
-          <td><%= link_to "Bearbeiten", edit_user_path(users) %></td>
-          <td><%= link_to "Löschen", users, method: :delete, data: { confirm: "Wollen Sie diese Userin löschen?" } %></td>
+          <td><%= link_to "", edit_user_path(users), :class=>'glyphicon glyphicon-pencil btn btn-default btn-xs' %></td>
+          <td><%= link_to "", users, method: :delete, data: { confirm: 'Möchten Sie die Nutzerin wirklich löschen?' }, :class=>'glyphicon glyphicon-trash btn btn-default btn-xs' %></td>
         </tr>
         <% end %>
       </tbody>
@@ -27,5 +27,7 @@
 
     <br>
 
-    <%= link_to "Neue Userin anlegen".html_safe, new_user_path, :id=>"open-contacts-dialog-btn", :class=>"btn btn-success btn-sm" %>
+    <%= link_to "Neue Nutzerin anlegen".html_safe, new_user_path, :id=>"open-contacts-dialog-btn", :class=>"btn btn-success btn-sm" %>
   </div>
+
+

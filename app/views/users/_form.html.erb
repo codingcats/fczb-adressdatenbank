@@ -12,11 +12,11 @@
 <% end %>
 
 <div class="left field">
-  <%= f.label :Name %><br>
+  <%= f.label :name, "Vor- und Nachname" %><br>
   <%= f.text_field :name %>
 </div>
 <div class="left field">
-  <%= f.label :Userinnenname %><br>
+  <%= f.label :Nutzerinnenname %><br>
   <%= f.text_field :username %>
 </div>
 <div class="left field">
@@ -25,6 +25,6 @@
 </div>
 
 <div class="actions" >
-  <%= f.submit "Userin speichern", :class=> "btn btn-success btn-default" %>
+  <%= f.submit "Nutzerin speichern", :class=> "btn btn-success btn-default" %>
 </div>
 <% end %>
