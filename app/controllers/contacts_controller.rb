@@ -10,7 +10,7 @@ class ContactsController < ApplicationController
     respond_to do |format|
       format.html
       format.csv do
-        headers['Content-Disposition'] = "attachment, filename=\"Kontaktliste\""
+        headers['Content-Disposition'] = "attachment; filename=\"Kontaktliste.csv\""
         headers['Content-Type'] ||= 'text/csv'
       end
     end
