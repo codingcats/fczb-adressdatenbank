@@ -45,7 +45,7 @@ textarea {
   border-radius: 60px;
 }
 
-td {
+td.email {
   padding: 10px;
   text-align: left;
   vertical-align: middle;
@@ -99,7 +99,6 @@ th.mah {
   float: left;
   margin-top: 1px;
   text-align: middle;
-
 }
 
 .nav.navbar-nav.navbar-right li a {
@@ -199,7 +198,6 @@ aside {
     }
     h1 {
       font-size: 1.4em;
-      /*text-align: left;*/
       letter-spacing: -1px;
       margin-bottom: 3px;
       margin-top: 0px;

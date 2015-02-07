@@ -36,18 +36,19 @@
         <th><%= f.label :Email, :id => "form-group required", :class => "form-group required col-md-12 control-label" %></th>
         <th></th>
         <th></th>
+        <th></th>
       </thead>
       <tbody>
         <%= f.fields_for :emails do |builder| %>
           <tr>
-            <td><%= builder.text_field :value %>&nbsp;</td>
-            <td><%= builder.check_box '_destroy'%>&nbsp;</td>
-            <td>Löschen</td>
+            <td class="email"><%= builder.text_field :value %></td>
+            <td class="email"><%= builder.check_box '_destroy'%></td>
+            <td class="email">Löschen</td>
+            <td class="email"><a class="add-email btn btn-info btn-xs"><b>+ weitere Email</b></a><br /><br></td>
           </tr>
         <% end %>
       </tbody>
     </table>
-    <a class="add-email btn btn-default btn-sm"><b>+ weitere Email</b></a><br /><br>
   </div>
 
   <div class="left field">
