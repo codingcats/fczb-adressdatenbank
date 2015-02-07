@@ -61,6 +61,9 @@ input[type="checkbox"] {
   left-indent: 20px;
 }
 
+.table-condensed > tbody > tr > td {
+  text-align: left;
+}
 
 td.email {
   text-align: left;
