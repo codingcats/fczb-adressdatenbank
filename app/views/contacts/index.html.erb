@@ -5,14 +5,26 @@
 
 <p>&nbsp;</p>
 
+<div>
+  <%= form_tag(search_contacts_path, method: "post") do %> 
+    <%= label_tag :Anlässe %><br>
+    <%= collection_select(:contact, :occasion_ids, @occasions, :id, :name, {}, {:multiple =>true}) %>
+    <%= submit_tag("Filtern") %>
+  <% end %>
+</div> 
+
+<div class="center">
+<%= link_to "Alle Kontakte anzeigen".html_safe, contacts_path, :id=>"open-contacts-dialog-btn", :class=>"btn btn-default btn-sm" %>
+</div>
+
 <table class="table table-condensed table-striped" border="0">
-    <thead style="vertical-align:bottom">
+  <thead style="vertical-align:bottom">
     <tr>
-      <th><%= sortable "last_name", "Nachname" %>&nbsp;</th>
+      <th><%= sortable "last_name", "Nachname", @occasion_ids %>&nbsp;</th>
       <th>Vorname &nbsp;</th>
       <th>Position &nbsp;</th>
-      <th><%= sortable "institution", "Institution"%>&nbsp;</th>
-      <th><%= sortable "postcode", "PLZ" %>&nbsp;</th>
+      <th><%= sortable "institution", "Institution", @occasion_ids %>&nbsp;</th>
+      <th><%= sortable "postcode", "PLZ", @occasion_ids %>&nbsp;</th>
       <th>Email &nbsp;</th>
       <th>Kommentar &nbsp;</th>
       <th>Kontaktanlässe &nbsp;</th>
