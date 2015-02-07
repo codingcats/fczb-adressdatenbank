@@ -1,12 +1,19 @@
 class ContactsController < ApplicationController
   before_action :set_contact, only: [:show, :edit, :update, :destroy]
-  before_action :set_institution_and_occasion, only: [:new, :edit, :index, :search]
+  before_action :set_institution_and_occasion, only: [:new, :edit, :create, :index, :search]
   helper_method :sort_column, :sort_direction
 
   # GET /contacts
   # GET /contacts.json
   def index
     @contacts = ordered_contacts
+    respond_to do |format|
+      format.html
+      format.csv do
+        headers['Content-Disposition'] = "attachment, filename=\"Kontaktliste\""
+        headers['Content-Type'] ||= 'text/csv'
+      end
+    end
   end
 
   # GET /contacts/1
@@ -105,7 +112,7 @@ class ContactsController < ApplicationController
         Contact.order_institution(sort_direction)
       when "postcode"
         Contact.order_postcode(sort_direction)
-      else 
+      else
         Contact.order("#{sort_column} #{sort_direction}")
       end
     end

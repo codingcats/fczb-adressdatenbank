@@ -1,6 +1,8 @@
-<div class="center jumbotron">
+  <div class="container">
+    <div class="jumbotron">
 
-<h1>Liste aller Kontakte</h1>
+  <h1>Liste aller Kontakte</h1>
+
 <p>&nbsp;</p>
 
 <div>
@@ -11,25 +13,18 @@
   <% end %>
 </div> 
 
-<table class="table table-condensed table-striped">
-  <thead>
+<table class="table table-condensed table-striped" border="0">
+  <thead style="vertical-align:bottom">
     <tr>
       <th><%= sortable "last_name", "Nachname" %>&nbsp;</th>
       <th>Vorname &nbsp;</th>
-      <th>Anrede &nbsp;</th>
       <th>Position &nbsp;</th>
-      <th>E-Mail &nbsp;</th>
-      <th>Festnetz &nbsp;</th>
-      <th>Mobil &nbsp;</th>
-      <th>Fax &nbsp;</th>
       <th><%= sortable "institution", "Institution"%>&nbsp;</th>
-      <th>Straße &nbsp;</th>
       <th><%= sortable "postcode", "PLZ" %>&nbsp;</th>
-      <th>Ort &nbsp;</th>
-      <th>Webseite &nbsp;</th>
+      <th>Email &nbsp;</th>
       <th>Kommentar &nbsp;</th>
       <th>Kontaktanlässe &nbsp;</th>
-      <th colspan="15"></th>
+      <th colspan="4"></th>
     </tr>
   </thead>
 
@@ -38,17 +33,10 @@
       <tr>
         <td><%= contact.last_name %></td>
         <td><%= contact.first_name %></td>
-        <td><%= contact.form_of_address %></td>
         <td><%= contact.position %></td>
-        <td><%= contact.email_addresses.join(", ") %></td>
-        <td><%= contact.landline %></td>
-        <td><%= contact.mobile %></td>
-        <td><%= contact.fax %></td>
         <td><%= contact.institution.name %></td>
-        <td><%= contact.institution.street %></td>
         <td><%= contact.institution.postcode %></td>
-        <td><%= contact.institution.city %></td>
-        <td><%= contact.institution.website %></td>
+        <td><%= contact.email_addresses.join(", ") %></td>     
         <td><%= contact.institution.comment %></td>
         <td><%= contact.occasions.present? ? contact.occasion_names.join(", ") : "" %></td>
         <td><%= link_to "", contact, :class=>'glyphicon glyphicon-eye-open btn btn-default btn-xs' %></td>
@@ -58,8 +46,10 @@
     <% end %>
   </tbody>
 </table>
-
+<div class="center">
 <br>
-<%= link_to "Neuen Kontakt anlegen".html_safe, new_contact_path, :id=>"open-contacts-dialog-btn", :class=>"btn btn-default btn-lg" %>
+<%= link_to "Neuen Kontakt anlegen".html_safe, new_contact_path, :id=>"open-contacts-dialog-btn", :class=>"btn btn-default btn-sm" %>
+
+<%= link_to 'Download als CSV', contacts_path(format: :csv), :id=>"open-contacts-dialog-btn", :class=>"btn btn-info btn-sm" %>
 
 </div>

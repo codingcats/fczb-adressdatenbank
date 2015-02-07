@@ -1,13 +1,20 @@
-<% provide(:title, @user.name) %>
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
-        <%= @user.name %>
-      </h1>
-      <h2>
-        <%= @user.username %>
-      </h2>
-    </section>
-  </aside>
+<div class="center jumbotron">
+
+<p id="notice"><%= notice %></p>
+
+<p class="left">
+  <strong>Vor- und Nachname:</strong>
+  <%= @user.name %>
+</p>
+
+<p class="left">
+  <strong>Username:</strong>
+  <%= @user.username %>
+</p>
+
+<%= link_to 'bearbeiten', edit_user_path(@user), :class=>"btn btn-default btn-lg" %>
+<%= link_to 'Alle Userinnen', users_path, :class=>"btn btn-default btn-lg"%>
+
+
+
 </div>

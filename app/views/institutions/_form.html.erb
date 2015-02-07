@@ -1,3 +1,5 @@
+<div class="center container">
+  <div class="form-group required">
 <%= form_for(@institution) do |f| %>
   <% if @institution.errors.any? %>
     <div id="error_explanation">
@@ -12,7 +14,7 @@
   <% end %>
 
   <div class="left field">
-    <%= f.label :Name %><br>
+    <%= f.label :Name, :id => "form-group required", :class=> "col-md-12 control-label" %><br>
     <%= f.text_field :name %>
   </div>
   <div class="left field">
@@ -36,8 +38,12 @@
     <%= f.text_field :comment %>
   </div>
 
+<div class="left req"><b>* </b>Pflichtfeld bitte ausf&uuml;llen.</div><br>
+
   <div class="actions">
-    <%= f.submit "Datensatz speichern", :class=> "btn btn-success btn-sm" %>
+    <%= f.submit "Datensatz speichern", :class=> "btn btn-success btn-default" %>
   </div>
 
 <% end %>
+</div>
+</div>
