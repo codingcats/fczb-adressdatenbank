@@ -16,11 +16,11 @@
 <table class="table table-condensed table-striped" border="0">
   <thead style="vertical-align:bottom">
     <tr>
-      <th><%= sortable "last_name", "Nachname" %>&nbsp;</th>
+      <th><%= sortable "last_name", "Nachname", @occasion_ids %>&nbsp;</th>
       <th>Vorname &nbsp;</th>
       <th>Position &nbsp;</th>
-      <th><%= sortable "institution", "Institution"%>&nbsp;</th>
-      <th><%= sortable "postcode", "PLZ" %>&nbsp;</th>
+      <th><%= sortable "institution", "Institution", @occasion_ids %>&nbsp;</th>
+      <th><%= sortable "postcode", "PLZ", @occasion_ids %>&nbsp;</th>
       <th>Email &nbsp;</th>
       <th>Kommentar &nbsp;</th>
       <th>Kontaktanlässe &nbsp;</th>

@@ -72,9 +72,9 @@ class ContactsController < ApplicationController
   end
 
   def search
-    occasion_ids = params[:contact][:occasion_ids]
-    occasion_ids.find_all{|str| str.to_i.to_s == str}.map(&:to_i)
-    @contacts = Contact.filter_occasions(occasion_ids)
+    @occasion_ids = params[:contact][:occasion_ids]
+    @occasion_ids.find_all{|str| str.to_i.to_s == str}.map(&:to_i)
+    @contacts = ordered_contacts.filter_occasions(@occasion_ids)
     render 'index'
   end
 
