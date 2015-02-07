@@ -43,21 +43,40 @@ textarea {
   padding-right: 10px;
   border-radius: 60px;
 }
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9;
+  line-height: normal;
+  margin-bottom: 20px;
+}
 
-td {
-  padding: 10px;
+.col-md-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 0px;
+  padding-right: 15px;
+}
+.add-email {
+  left-indent: 20px;
+}
+
+
+td.email {
   text-align: left;
-  vertical-align: middle;
+  padding: 0px 10px 0px 0px;
+  vertical-align: bottom;
 }
 
-
-/* Contacts table */
-
-th.mah {
-  weight: normal;
-  color: #dd3333;
-  background-color: #fefefe;
+th {
+  vertical-align: top;
+  text-indent: 5px;
 }
+
+.email-delete {
+  padding-top: 30px;
+}
+
 
 /* Required field */
 
@@ -93,7 +112,6 @@ th.mah {
   float: left;
   margin-top: 1px;
   text-align: middle;
-
 }
 
 .nav.navbar-nav.navbar-right li a {
@@ -193,7 +211,6 @@ aside {
     }
     h1 {
       font-size: 1.4em;
-      /*text-align: left;*/
       letter-spacing: -1px;
       margin-bottom: 3px;
       margin-top: 0px;
@@ -206,7 +223,7 @@ aside {
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 input {
@@ -230,7 +247,7 @@ input {
 
 .checkbox {
   margin-top: -10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   span {
     margin-left: 20px;
     font-weight: normal;
