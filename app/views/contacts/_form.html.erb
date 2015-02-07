@@ -31,16 +31,18 @@
   </div>
 
   <div class="field left email-container">
-    <table>
+    <table border="0">
       <thead>
-        <th><%= f.label :Email, :id => "form-group required", :class=> "form-group required col-md-12 control-label" %></th>
-        <th>Löschen</th>
+        <th><%= f.label :Email, :id => "form-group required", :class => "form-group required col-md-12 control-label" %></th>
+        <th></th>
+        <th></th>
       </thead>
       <tbody>
         <%= f.fields_for :emails do |builder| %>
           <tr>
-            <td><%= builder.text_field :value %></td>
-            <td><%= builder.check_box '_destroy' %></td>
+            <td><%= builder.text_field :value %>&nbsp;</td>
+            <td><%= builder.check_box '_destroy'%>&nbsp;</td>
+            <td>Löschen</td>
           </tr>
         <% end %>
       </tbody>
