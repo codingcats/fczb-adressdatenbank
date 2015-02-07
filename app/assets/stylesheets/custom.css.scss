@@ -36,7 +36,6 @@ textarea {
 
 .jumbotron {
    margin: 10px;
-   text-indent: 5px;
 }
 
 .jumbotron .container {
@@ -44,26 +43,40 @@ textarea {
   padding-right: 10px;
   border-radius: 60px;
 }
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+
+.col-md-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 0px;
+  padding-right: 15px;
+}
+.add-email {
+  left-indent: 20px;
+}
+
 
 td.email {
-  padding: 10px;
   text-align: left;
-  vertical-align: middle;
+  padding: 0px 10px 0px 0px;
+  vertical-align: bottom;
 }
 
 th {
-  vertical-align: middle;
+  vertical-align: top;
   text-indent: 5px;
 }
 
-
-/* Contacts table */
-
-th.mah {
-  weight: normal;
-  color: #dd3333;
-  background-color: #fefefe;
+.email-delete {
+  padding-top: 30px;
 }
+
 
 /* Required field */
 
@@ -210,7 +223,7 @@ aside {
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 input {
@@ -234,7 +247,7 @@ input {
 
 .checkbox {
   margin-top: -10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   span {
     margin-left: 20px;
     font-weight: normal;
