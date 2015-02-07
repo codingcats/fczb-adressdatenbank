@@ -10,7 +10,7 @@ class ContactsController < ApplicationController
     respond_to do |format|
       format.html
       format.csv do
-        headers['Content-Disposition'] = "attachment, filename=\"Kontaktliste\""
+        headers['Content-Disposition'] = "attachment; filename=\"Kontaktliste.csv\""
         headers['Content-Type'] ||= 'text/csv'
       end
     end
@@ -75,7 +75,14 @@ class ContactsController < ApplicationController
     @occasion_ids = params[:contact][:occasion_ids]
     @occasion_ids.find_all{|str| str.to_i.to_s == str}.map(&:to_i)
     @contacts = ordered_contacts.filter_occasions(@occasion_ids)
-    render 'index'
+    respond_to do |format|
+      format.html { render 'index' }
+      format.csv do
+        headers['Content-Disposition'] = "attachment; filename=\"Kontaktliste.csv\""
+        headers['Content-Type'] ||= 'text/csv'
+        render 'index'
+      end
+    end
   end
 
   private
