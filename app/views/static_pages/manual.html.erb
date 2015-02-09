@@ -1,0 +1,425 @@
+<h1>Willkommen zu deinem Handbuch</h1>
+<table>
+	<tr><td valign="top">
+	<div class="beispiel">
+		<nav_manual>
+			<a href="#einl">Einleitung</a>
+			<ul>
+			</ul>
+			<a href="#zugang">Zugang</a>
+			<ul>
+				<li><a href="#login">Log-in</a>
+				<li><a href="#logout">Log-out</a>
+			</ul>
+			<a href="#kontakte">Kontakte</a>
+			<ul>
+				<li><a href="#kanzeiga">Alle Kontakte anzeigen</a>
+				<li><a href="#kanzeig">Kontakt anzeigen</a>
+				<li><a href="#kbearb">Kontakt bearbeiten</a>
+				<li><a href="#khinzu">Kontakt anlegen</a>
+				<li><a href="#kloeschen">Kontakt löschen</a>
+				<li><a href="#kexport">Kontakte exportieren</a>
+			</ul>
+			<a href="#institution">Institution</a>
+			<ul>
+				<li><a href="#ianzeiga">Alle Institutionen anzeigen</a>
+				<li><a href="#ianzeig">Institution anzeigen</a>
+				<li><a href="#ihinzu">Institution anlegen</a>
+				<li><a href="#ibearb">Institution bearbeiten</a>
+				<li><a href="#iloeschen">Institution löschen</a>
+			</ul>
+			<a href="#anlsse">Anlässe</a>
+			<ul>
+				<li><a href="#aanzeiga">Alle Anlässe anzeigen</a>
+				<li><a href="#aanzeig">Anlass anzeigen</a>
+				<li><a href="#ahinzu">Anlass anlegen</a>
+				<li><a href="#abearb">Anlass bearbeiten</a>
+				<li><a href="#aloeschen">Anlass löschen</a>
+			</ul>
+
+			<a href="#admin">Administrationsoberfläche</a>
+			<ul>
+				<li><a href="#nutzanzeiga">Alle Nutzerinnen anzeigen</a>
+				<li><a href="#nutzhinzu">Nutzerin anlegen</a>
+				<li><a href="#nutzbearb">Nutzerin bearbeiten</a>
+				<li><a href="#nutzloeschen">Nutzerin löschen</a>
+			</ul>
+		</nav_manual>
+	</td>
+	<td>
+		<section class="container">
+
+			<h2>
+				<a id="einl">Einleitung</a>
+			</h2>
+			<h4>Was ist die FCZB-Kontaktdatenbank?</h4>
+			<p>Die Kontakdatenbank wurde im Rahmen eines
+				Fachhochschulprojektes von Studentinnen des Studiengangs "Informatik
+				und Wirtschaft" der HTW Berlin erstellt. Das Projekt wurde
+				OpenSource (Code auf GitHub) verwirklicht und auf Basis von Ruby on
+				Rails und MySQL entwickelt. Die Kontaktdatenbank soll die Arbeit des
+				FCZB im allgemeinen und insbesondere der Abteilung PR und
+				Öffentlichkeitsarbeit erleichtern. Die Datensätze aller Kontakte,
+				mit denen das FCZB kommuniziert, werden hier vereint und zentral
+				organisiert.</p>
+			<h4>Welche Vorteile bietet sie?</h4>
+			<p>Die Kontaktdatenbank verfügt über ein intuitiv bedienbares
+				Design/Layout. Das Anlegen und Pflegen von Kontakten wird für die
+				Mitarbeiterinnen des FCZB somit nachhaltig erleichtert. Für die
+				Benutzung ist kein besonderes technisches Know-How erforderlich. Ein
+				weiteres Highlight stellt die Trennung der Oberflächen in
+				Nutzerinnen- und Administratorinnensicht dar.</p>
+			<h4>Wozu das Handbuch?</h4>
+			<p>In dem vorliegenden Handbuch werden die wichtigsten Features
+				der Kontaktdatenbank vorgestellt. Es bietet einen schnellen Einstieg
+				im Umgang mit der Kontaktdatenbank. Darüber hinaus eignet es sich
+				zum Nachschlagen der Basics.</p>
+
+			<h2>
+				<a id="zugang">Zugang</a>
+			</h2>
+			<p>Die Kontaktdatenbank verwendet alle gängigen Web-Browser als
+				Client. Der Zugriff auf das Frontend erfolgt mittels aufruf der
+				Kontaktdatenbank-URL.</p>
+
+			<h3>
+				<a id="login">Log-in</a>
+			</h3>
+			<p>
+				Voraussetzung ist, dass Du dich auf der Willkommensseite befindest.
+				Es gibt zwei Möglichkeiten zur Login-Seite zu gelangen: 
+				<ol>
+				<li>1. Klicke auf der Startseite den im Text befindlichen Link "logge dich ein".</li>
+				<li>2. Klicke im Menü oben rechts "Einloggen" .</li>
+				</ol>  
+				<img id="mitte" border="1" src="../assets/willkommen.png" alt="Willkommensseite"> Danach wird
+				Dir die Login-Seite angezeigt. Gebe Deinen gültigen
+				Nutzerinnennamen und das Passwort ein. Außerdem gibt es noch die
+				Moeglichkeit "Eingeloggt bleiben" auszuwählen, damit Du dich nicht
+				jedes Mal neu anmelden musst. Bestätige Deine Eingaben mit dem
+				Einloggen-Button. Sind alle Eingaben richtig, gelangst Du auf die
+				Startseite der Kontaktdatenbank.
+				<div class="message-info">
+				<strong>Hinweis:</strong> Sind die Pflichtfelder nicht ausgefüllt,
+				erhältst Du eine Fehlermeldung.</div>
+				<img id="mitte" alt="Loginseite"border="1" src="../assets/login.png">
+				<div class="message-tipp">
+				<strong>Tipp:</strong>
+				Bei Klick auf das Logo oben links kommst Du immer zurück auf die Startseite.
+				</div>
+				<img id="mitte" alt="Logo Startseite"border="1" src="../assets/logoStartseite.png">
+				
+				
+			</p>
+			<h3>
+				<a id="logout">Log-out</a>
+			</h3>
+			<p>Du kannst Dich von jeder Seite aus abmelden. Wähle im Menü oben rechts "Nutzerin > Ausloggen".</p>
+			<img id="mitte" alt="Logout" border="1" src="../assets/logout.png">
+				
+			<h2>
+				<a id="kontakte">Kontakte</a>
+			</h2>
+			<p>Kontakte sind die Personen, mit denen das FCZB kommuniziert.
+				Sie enthalten Daten wie z.B. Vor- und Nachname, E-Mail und
+				Anschrift.</p>
+	
+			<h3>
+				<a id="kanzeiga"></a>Alle Kontakte anzeigen
+			</h3>
+			<p>Um eine Übersicht aller Kontakte sehen zu koennen, hast Du zwei Moeglichkeiten:
+			<ol>
+				<li>1. Klicke auf den Button "Kontakte".</li>
+				<li>2. Öffne das Menü "Übersicht" und wähle dort "Kontakte" aus. </li>
+				</ol>
+				<img id="mitte" alt="Kontakte anzeigen"	border="1" src="../assets/kontakteAnzeigen.png"> 
+				Danach erhältst Du die Übersicht aller vorhandenen Kontakte. 
+				<img id="mitte"	alt="Kontakte Übersicht" border="1" src="../assets/kontaktuebersicht.png">
+			</p>
+				<div class="message-tipp">
+				<strong>Tipp:</strong>
+				Du kannst die angezeigten Kontakte alphabetisch ab- oder aufsteigend sortieren. Klicke dazu auf die Spaltenüberschrift "Nachname".
+				</div>
+			<h3>
+				<a id="kanzeig"></a>Kontakt anzeigen
+			</h3>
+			<p>
+				In der Liste aller Kontakte (Übersicht) kannst Du Dir jeden Kontakt einzeln anzeigen lassen.
+				Dazu klickst Du bitte auf das Augensymbol <img border="1" src="../assets/Auge.png"> am Zeilenende des Kontakts.
+				Dann oeffnet sich eine Detailseite mit den Kontaktdaten. Von hier aus kannst du mit Klick auf den entsprechenden Button den
+				Kontakt bearbeiten oder auf die Übersichtsseite zurückkehren.
+				
+				<img id="mitte" alt="Kontakt anzeigen" border="1" src="../assets/kontaktAnzeigen.png">  
+			</p>
+			<h3>
+				<a id="kbearb"></a>Kontakt bearbeiten
+			</h3>
+			<p>
+				Um einen einzelnen Kontakt zu bearbeiten, gibt es zwei Möglichkeiten:
+				<ol>
+					<li>1. Klicke bitte auf das Stiftsymbol <img border="1" src="../assets/stift.png"> am Zeilenende des Kontakts. Jetzt oeffnet sich eine Seite, in der Daten bearbeitet werden koennen.
+				Durch Klick auf "Datensatz speichern" werden die Eingaben übernommen. Bei Klick auf die Buttons "Kontakt anzeigen" bzw. "Alle Kontakte"
+				wird der  Vorgang abgebrochen, die Eingaben werden nicht gespeichert. </li>
+				<img id="mitte" alt="Kontakt bearbeiten" border="1" src="../assets/kontaktBearbeiten.png">
+					<li>2. Wenn Du Dich in der Detailansicht des Kontakts befindest, kommst Du durch Klick auf den Button "Bearbeiten" ebenfalls auf die Bearbeitungsseite
+				des ausgewählten Kontakts, um Daten zu ändern.</li>
+				<img id="mitte" alt="Kontakt bearbeiten 2" border="1" src="../assets/kontaktBearbeiten2.png">
+				</ol>
+				
+				
+			</p>
+			
+			<h3>
+				<a id="khinzu"></a>Kontakt anlegen
+			</h3>
+			<p>
+				Du hast zwei Möglichkeiten einen Kontakt hinzuzufügen:
+				<ol>
+				<li>1. Klicke auf der Startseite auf den Button "Kontakt neu".</li>
+				<li>2. Öffne das Menü "Neu" in der oberen Navigation und klicke dann auf "Kontakt".</li>
+				</ol>
+				<img id="mitte" alt="Kontakt hinzufügen" border="1" src="../assets/kontaktNeu.png"> 
+				In der angezeigten Maske kannst Du die Informationen eingeben. Pflichtangaben sind: Vorname, Name, E-Mail-Adresse.
+				Mit Klick auf den Button "Datensatz speichern" wird der Datensatz angelegt. Hast Du die Pflichtfelder nicht oder nicht vollständig ausgefüllt,
+				erhältst Du eine Fehlermeldung. Sind die Angaben vollständig, erhältst Du eine Bestätigung.
+				<div class="message-info">
+				<strong>Hinweise:</strong> 
+					<ul>
+						<li style="list-style-type: disc;">Du kannst einem Kontakt beim Anlegen und/oder späteren Bearbeiten mehrere E-Mail-Adressen zuweisen.
+						Klicke dazu bitte auf den Button "+ weitere E-Mail").
+						</li>
+						<li style="list-style-type: disc;">Du kannst dem Kontakt nur vorhandene Institutionen zuweisen.  Wenn Du feststellst, es gibt die gewünschte Institution noch nicht, fülle die Kontaktdaten aus und speichere den Kontakt. Dann legst Du eine neue Institution an und speicherst diese ebenfalls. Wenn Du jetzt Deinen
+						Kontakt erneut oeffnest, wird die Institution angezeigt und kann zugeordnet werden.
+						</li>
+						<li style="list-style-type: disc;">Um dem Kontakt einen Anlass zu zuordnen, klicke bitte auf den entsprechenden Anlass. Um mehrere Anlässe gleichzeitig auszuwählen, klicke die Anlässe bei gleichzeitig gedrückter CTRL/STRG-Taste an.
+						</li>
+					</ul>
+				</div>
+				<img
+					id="mitte" alt="Kontaktmaske" border="1" src="../assets/kontaktNeuMaske.png">
+
+			
+			<h3>
+				<a id="kloeschen"></a>Kontakt loeschen
+			</h3>
+			<p>
+				Ausgangspunkt um einen Kontakt zu loeschen, ist die Übersicht (Liste aller Kontakte). 
+				Klicke dann auf das Papierkorb-Symbol <img border="1" src="../assets/papierkorb.png"> am Zeilenende.
+				Es erscheint eine Sicherheitsfrage, die Du bestätigst, um den Kontakt endgültig zu
+				löschen. Mit Klick auf "Abbrechen" wird der Löschvorgang abgebrochen, der Datensatz bleibt erhalten.
+				<img id="mitte" alt="Kontakt löschen" border="1" src="../assets/kontaktLoeschen.png">
+			</p>
+			
+			<h3>
+				<a id="kexport"></a>Kontakte exportieren
+			</h3>
+			<p> Ausgangspunkt um Kontakte zu exportieren, ist die Übersicht (Liste aller Kontakte). 
+				Klicke dann auf den Button "Download als CSV". 
+				<img id="mitte" alt="Kontakte exportieren" border="1" src="../assets/kontakteDownloade.png">
+			</p>
+	
+			<h2>
+				<a id="institution">Institutionen</a>
+			</h2>
+			<p>Institutionen sind die Einrichtungen, bei denen die Kontakte
+				tätig sind. Einer Institution koennen mehrere Kontakte zugeordnet
+				sein.</p>
+			<h3>
+				<a id="ianzeiga"></a>Alle Institutionen anzeigen
+			</h3>
+			<p>
+				Um eine Übersicht aller Institutionen sehen zu koennen, hast Du zwei Möglichkeiten:
+			<ol>
+				<li>1. Klicke auf den Button "Institutionen".</li>
+				<li>2. Öffne das Menü "Übersicht" und wähle dort "Institutionen" aus. </li>
+				</ol> <img id="mitte" alt="Institutionen anzeigen"
+					border="1" src="../assets/instsuebersicht.png">
+				Danach erhältst Du die	Übersicht aller vorhandener Institutionen. 
+				<img id="mitte" alt="Institutionen Übersicht" border="1" src="../assets/instGesamt.png">
+			</p>
+			<h3>
+				<a id="ianzeig"></a>Institution anzeigen
+			</h3>
+			<p>
+				In der Liste aller Institutionen (Übersicht) kannst Du Dir jede Institution einzeln anzeigen lassen.
+				Dazu klickst Du bitte auf das Augensymbol <img border="1" src="../assets/auge.png"> am Zeilenende der Institution.
+				Dann öffnet sich eine Detailseite mit den Institutionsdaten. Von hier aus kannst du mit Klick auf den entsprechenden Button die
+				Institution bearbeiten oder auf die Übersichtsseite zurückkehren.
+				 <img id="mitte"
+					alt="Institution anzeigen" border="1" src="../assets/instAnzeigen.png">
+			</p>
+			<h3>
+				<a id="ihinzu"></a>Institution anlegen
+			</h3>
+			<p>
+				Du hast zwei Moeglichkeiten eine Institution hinzuzufügen:
+				<ol>
+				<li>1. Klicke auf der Startseite auf den Button "Institution neu".</li>
+				<li>2. Öffne das Menü "Neu" in der oberen Navigation und klicke dann auf "Institution".</li>
+				</ol><img id="mitte"
+					alt="Institution hinzufügen" border="1" src="../assets/instNeu.png">
+				In der angezeigten Maske kannst Du die Informationen eingeben. Pflichtangabe ist: Name.
+				Mit Klick auf den Button "Datensatz speichern" wird der Datensatz angelegt. Sind die Angaben vollständig, erhältst Du eine Bestätigung.
+				<img id="mitte" alt="Institution Eingabemaske" border="1" src="../assets/instNeuMaske.png">
+					<div class="message-info">
+				<strong>Hinweis:</strong> Sind die Pflichtfelder nicht ausgefüllt,
+				erhältst Du eine Fehlermeldung.</div>
+			
+			</p>
+			<h3>
+				<a id="ibearb"></a>Institution bearbeiten
+			</h3>
+			<p>
+				Um eine einzelne Institution zu bearbeiten, gibt es zwei Moeglichkeiten:
+				<ol>
+					<li>1. Klicke bitte auf das Stiftsymbol  <img border="1" src="../assets/stift.png"> am Zeilenende der Institution. Jetzt oeffnet sich eine Seite, in der Daten bearbeitet werden koennen.
+				Durch Klick auf "Datensatz speichern" werden die Eingaben übernommen. Bei Klick auf die Buttons "Institution anzeigen" bzw. "Alle Institutionen"
+				wird der  Vorgang abgebrochen, die Eingaben werden nicht gespeichert. </li>
+				 <img id="mitte" alt="Institution bearbeiten" border="1" src="../assets/instBearbeiten.png">
+				 <li>2. Wenn Du Dich in der Detailansicht der Institution befindest, kommst Du durch Klick auf den Button "Bearbeiten" ebenfalls auf die Bearbeitungsseite
+				der ausgewählten Institution, um Daten zu ändern.</li>
+			</p>
+			<h3>
+				<a id="iloeschen"></a>Institution loeschen
+			</h3>
+			<p>
+				Ausgangspunkt um eine Institution zu loeschen, ist die Übersicht (Liste aller Institutionen). Klicke dann auf das Papierkorb-Symbol  <img border="1" src="../assets/papierkorb.png"> am Zeilenende.
+				Es erscheint eine Sicherheitsfrage, die Du bestätigst, um die Institution endgültig zu loeschen. Mit Klick auf "Abbrechen" wird der Loeschvorgang abgebrochen, der Datensatz bleibt erhalten.<img id="mitte" alt="Institution loeschen"
+					border="1" src="../assets/instLoeschen.png">
+			</p>
+			<h2>
+				<a id="anlass">Anlässe</a>
+			</h2>
+			<p>Anlässe sind alle Anlässe z.B. Weihnachtsgruß,
+				Einladung zu Seminaren etc., aus denen mit den Kontakten kommuniziert
+				wird. Hierunter finden sich auch Kategorien, in die die Kontakte
+				eingeteilt werden wie z.B. Presse, Multiplikatorinnen etc.</p>
+
+			<h3>
+				<a id="aanzeiga">Alle Anlässe anzeigen</a>
+			</h3>
+			<p>
+				Um eine Übersicht aller Anlässe sehen zu koennen, hast Du zwei Moeglichkeiten:
+			<ol>
+				<li>1. Klicke auf den Button "Anlässe".</li>
+				<li>2. Öffne das Menü "Übersicht" und wähle dort "Anlässe" aus. </li>
+				</ol> <img id="mitte" alt="Anlässe anzeigen"
+					border="1" src="../assets/anlassuebersicht.png">
+			</p>
+
+			<h3>
+				<a id="aanzeig"></a>Anlass anzeigen
+			</h3>
+			<p>
+				In der Liste aller Anlässe (Übersicht) kannst Du Dir jeden Anlass einzeln anzeigen lassen.
+				Dazu klickst Du bitte auf das Augensymbol <img border="1" src="../assets/Auge.png"> am Zeilenende des Anlasses.
+				Dann oeffnet sich eine Detailseite mit den Anlassdaten. Von hier aus kannst du mit Klick auf den entsprechenden Button den
+				Anlass bearbeiten oder auf die Übersichtsseite zurückkehren. <img id="mitte" alt="Anlass anzeigen"
+					border="1" src="../assets/anlassAnzeigen1.png">
+			</p>
+			<h3>
+				<a id="ahinzu"></a>Anlass anlegen
+			</h3>
+			<p>
+				Du hast zwei Moeglichkeiten einen Anlass hinzuzufügen:
+				<ol>
+				<li>1. Klicke auf der Startseite auf den Button "Anlass neu".</li>
+				<li>2. Öffne das Menü "Neu" in der oberen Navigation und klicke dann auf "Anlass".</li>
+				</ol> <img id="mitte" alt="Anlass anlegen"
+					border="1" src="../assets/anlassNeu.png">
+				In der angezeigten Maske kannst Du die Informationen eingeben. Mit Klick auf den Button "Datensatz speichern" wird der 
+				Datensatz angelegt. Sind die Angaben vollständig, erhältst Du eine Bestätigung.
+				<img id="mitte" alt="Anlass Eingabemaske" border="1" src="../assets/anlassNeuMaske.png"></p>
+				<div class="message-info">
+				<strong>Hinweis:</strong> Das Eingabefeld
+				Bezeichnung ist ein Pflichtfeld und muss ausgefüllt sein um den
+				Anlass speichern zu koennen.</div>
+				
+			<h3>
+				<a id="abearb"></a>Anlass bearbeiten
+			</h3>
+			<p>
+				Um einen einzelnen Anlass zu bearbeiten, gibt es zwei Moeglichkeiten:
+				<ol>
+					<li>1. Klicke bitte auf das Stiftsymbol  <img border="1" src="../assets/stift.png"> am Zeilenende des Anlasses. Jetzt oeffnet sich eine Seite, in der Daten bearbeitet werden koennen.
+				Durch Klick auf "Datensatz speichern" werden die Eingaben übernommen. </li>
+				<img id="mitte" alt="Anlass bearbeiten" border="1" src="../assets/anlassBearbeiten.png">
+				
+				<li>2. Wenn Du Dich in der Detailansicht des Anlasses befindest, kommst Du durch Klick auf den Button "Bearbeiten" ebenfalls auf die Bearbeitungsseite
+				des ausgewählten Anlasses, um Daten zu ändern.</li>
+				</ol>
+				
+			</p>
+
+			<h3>
+				<a id="aloeschen"></a>Anlass löschen
+			</h3>
+			<p>
+				Ausgangspunkt um einen Anlass zu loeschen, ist die Übersicht (Liste aller Anlässe). Klicke dann auf das Papierkorb-Symbol  <img border="1" src="../assets/papierkorb.png"> am Zeilenende.
+				Es erscheint eine Sicherheitsfrage, die Du bestätigst, um den Anlass endgültig zu loeschen. Mit Klick auf "Abbrechen" wird der Loeschvorgang abgebrochen, der Datensatz bleibt erhalten.<img id="mitte"
+					alt="Anlass loeschen" border="1" src="../assets/anlassLoeschen.png">
+			</p>
+
+			<h2>
+				<a id="admin">Administrationsoberfläche</a>
+			</h2>
+			<p>In der Oberfläche haben die Administratorinnen die Moeglichkeit neue Nutzerinnen
+				hinzuzufügen, zu bearbeiten und zu loeschen.
+				Die Administratorinnen koennen die oben beschriebenen Aktionen zusätzlich durchführen.</p>
+			<div class="message-info">
+			<strong>Hinweis:</strong> 
+			Das Recht die Administrationsoberfläche zu benutzen,
+				haben nur ausgewählte Mitarbeiterinnen im FCZB.</div>
+			<h3>
+				<a id="nutzanzeiga">Alle Nutzerinnen anzeigen</a>
+			</h3>
+			<p>
+				Von der Startseite aus kannst Du Dich durch klicken des Buttons
+				"Userinnen bearbeiten" zur Übersicht aller Nutzerinnen navigieren. <img
+					id="mitte" alt="Nutzerinnen Anzeigen" border="1" src="../assets/nutzuebersicht.png">
+			</p>
+
+			<h3>
+				<a id="nutzhinzu">Nutzerin anlegen</a>
+			</h3>
+			<p>
+				Ausgangspunkt um eine Nutzerin anzulegen, ist die Übersicht (Liste aller Userinnen).  
+				Klicke den Button "Neue Userin anlegen". 
+				<img id="mitte" alt="Nutzerin anlegen" border="1" src="../assets/nutzNeu.png"> 
+				Danach siehst Du die Eingabemaske. Du
+				hast nun die Moeglichkeit die Felder mit den gewünschten Angaben zu
+				befüllen. Zum Speichern klicke den Button "Userin speichern". <img
+					id="mitte" alt="Nutzerin Eingabemaske" border="1" src="../assets/nutzNeuMaske.png">
+			</p>
+
+			<h3>
+				<a id="nutzbearb">Nutzerin bearbeiten</a>
+			</h3>
+			<p>
+				Ausgangspunkt um eine Nutzerin zu bearbeiten, ist die Übersicht (Liste aller Userinnen). 
+				Klicke den "Bearbeiten" Link. Wenn Du diesen auswählst, wird Dir auf der Folgeseite die
+				Maske "Userin bearbeiten" angezeigt. In dieser kannst Du nun die
+				gewünschten Änderungen vornehmen. Mit dem Button "Userin speichern"
+				übernimmst Du die Eingaben. <img id="mitte"
+					alt="Nutzerin bearbeiten" border="1" src="../assets/nutzBearbeiten.png">
+			</p>
+
+			<h3>
+				<a id="nutzloeschen">Nutzerin löschen</a>
+			</h3>
+			<p>
+				Ausgangspunkt um eine Nutzerin zu loeschen, ist die Übersicht (Liste aller Userinnen). 
+				Klicke den "Loeschen" Link. Es erscheint eine Sicherheitsfrage, die Du 
+				bestätigst, um die Nutzerin endgültig zu loeschen. Mit Klick auf "Abbrechen"
+				wird der Loeschvorgang abgebrochen, der Datensatz bleibt erhalten. 
+				<img id="mitte"	alt="Nutzerin löschen" border="1" src="../assets/nutzLoeschen.png">
+			</p>
+		</section>
+	</div>
+</td>
+</tr>
+</table>
+
+	<div class="center container">
+		<br>&nbsp;</br>
+</div>
