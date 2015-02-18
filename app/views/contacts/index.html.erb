@@ -10,7 +10,7 @@
 <div>
   <%= form_tag(search_contacts_path, method: "post") do %> 
     <%= label_tag :Anlässe %><br>
-    <%= collection_select(:contact, :occasion_ids, @occasions, :id, :name, {}, {:multiple =>true}) %>
+    <%= collection_select(:contact, :occasion_ids, @occasions, :id, :name, {:include_hidden => false}, {:multiple => true}) %>
     <%= submit_tag("Filtern") %>
   <% end %>
 </div> 
