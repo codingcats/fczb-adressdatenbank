@@ -6,7 +6,7 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body data-spy="scroll" data-target=".nav_menu">
   <%= render 'layouts/header' %>
   <!-- <div class="center container">-->
 		<%= yield %>
