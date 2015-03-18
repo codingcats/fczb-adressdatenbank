@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150203103623) do
+ActiveRecord::Schema.define(version: 20150318184119) do
 
   create_table "contacts", force: true do |t|
     t.string   "first_name"
@@ -62,8 +62,8 @@ ActiveRecord::Schema.define(version: 20150203103623) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "dispatch_mode"
     t.datetime "deleted_at"
+    t.integer  "dispatch_mode", default: 0
   end
 
   add_index "occasions", ["deleted_at"], name: "index_occasions_on_deleted_at"
