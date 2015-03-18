@@ -120,7 +120,7 @@ class ContactsController < ApplicationController
       when "postcode"
         Contact.order_postcode(sort_direction)
       else
-        Contact.order("#{sort_column} #{sort_direction}")
+        Contact.order("LOWER(#{sort_column}) #{sort_direction}")
       end
     end
 end
